@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html lang="vi">
+	<head>
+		<title>Happy New Year</title>
+		<meta charset="utf-8" \>
+		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+		<link rel="icon" type="image/png" href="http://imgur.com/CILKGax.png">
+		<script type="text/javascript">
+			alert("hello ^,^");
+			window.onload = function() {
+			var ten1 = "Công";
+			var ten2 = "Thơ";
+			var ten3 = "Ngọc";
+			var text = prompt("What is your name?");
+
+			if (text == null)
+				document.getElementById("demo").innerHTML ="";
+			else if (text == "")
+					document.getElementById("demo").innerHTML = "";
+				else document.getElementById("demo").innerHTML = text + "!";
+			
+			if (text == ten1)
+				document.getElementById("name").innerHTML = "Chúc thầy 1 năm mới vui vẽ, hạnh phúc bên gia đình nha.<br/> Chúc thầy luôn được thành công trên sự nghiệp của mình &hearts;";
+			else if (text == ten2) 
+				document.getElementById("name").innerHTML = "<br/>Chúc em 1 năm mới vui vẻ, hạnh phúc bên gia đình nha. Anh xin cảm ơn em vì đã bên anh luôn chia sẽ cho anh những lúc buồn<br/>Chúc em luôn được vui vẻ và luôn bên anh em nhé&hearts; love you<br/>Anh mong chúng mình luôn bên nhau như vậy không xa nhau được<br/><br/>I<br/>Love<br/>You<br/>&hearts;";
+				else if (text == ten3)
+					document.getElementById("name").innerHTML = "Tuy cái này không được đẹp nhưng nhân ngày tết đến xuân về t chúc m luôn vui vẻ như mọi ngày và ước mơ sẽ thành sự thật trong tương lai gần nhất &hearts;";
+					else document.getElementById("name").innerHTML = "Năm mới vui vẻ &hearts;";
+			};
+		</script>
+	</head>
+	<body>
+		<section>
+			<h1>Happy New Year</h1>
+			<h2><i>Send to <span id="demo"></span></i></h2>
+			<div class="khung">
+				<p id="name"></p>
+			</div>
+				<a href="2.html">Click here&hearts;</a>
+		</section>
+		<div class="den1"></div>
+		<div class="den2"></div>
+		<div class="den3"></div>
+		<div class="den4"></div>
+	</body>
+</html>
+<style>
+body{
+	background: #00ffd8;
+	position: relative;
+	margin: 50px;
+}
+section{
+	position: absolute;
+	text-align: center;
+	background-color: #fff;
+	background: while;
+	border:10px dashed #00ffd8;
+	height: auto;
+	width: 100%;
+}
+@font-face {
+    font-family: Brush Script Std;
+    src: url('vcouri-webfont.eot');
+    src: url('vcouri-webfont.eot?#iefix'),
+         url('vcouri-webfont.woff') format('woff'),
+         url('vcouri-webfont.ttf') format('truetype'), 
+         url('vcouri-webfont.svg#vni-courinormal') format('svg');	
+	unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+h1{
+	font-family: Brush Script Std;
+	color: #16d2e0;
+	font-size: 80px;
+	font-style:italic;
+	text-shadow: 4px 4px 4px slateblue;
+}
+ 
+h2{
+	font-family: Brush Script Std;
+	font-size: 40px;
+}
+h2 #demo{
+	animation-name:h;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+}
+@keyframes h{
+   0%{color: #ff9999;}
+   25%{color: #99ffcc;}
+   50%{color: #0099ff;}
+   75%{color: #ffcc99;}
+   100%{color:#ff99ff;}
+}
+.khung{
+	margin: 0 10%;
+	font-size: 45px;
+	text-align: left;
+}
+
+a{
+	font-family: Brush Script Std;
+	padding: 20px; 
+	margin: 5px 2px; 
+	text-decoration: none;
+    font-size: 50px; 
+    width: auto;
+    text-align: center;
+	border-radius: 25%;
+	border:2px solid #3B5998; 	
+	color: #fff;
+	background-color: #ff99ff;
+}
+a:hover{
+	background-color: #d101e8;
+	text-shadow: 4px 5px 5px #02e8b6;
+	transform: translateY(-3px);
+	box-shadow: 0 6px 10px 0 #000;
+}
+p{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.den1, .den2, .den3, .den4{
+	background-color:white;
+    width:20px;
+    height:20px;
+    border-radius:50px;}
+	
+.den1{
+	position:absolute;
+    top: 50px;
+    left: 50%;
+    animation-name: den;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.den2{
+	position:absolute;
+    top: 50px;
+    left: 52%;
+    animation-name: den;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.den3{
+	position:absolute;
+    top: 50px;
+    left: 54%;
+    animation-name: den;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+.den4{
+	position:absolute;
+    top: 50px;
+    left: 56%;
+    animation-name: den;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes den{
+    0%{background: #ff9999;}
+   25%{background: #99ffcc;}
+   50%{background: #0099ff;}
+   75%{background: #ffcc99;}
+   100%{background:#ff99ff;}
+}
+</style>

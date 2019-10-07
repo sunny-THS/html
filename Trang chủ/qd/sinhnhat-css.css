@@ -1,0 +1,54 @@
+html {
+    height : 100%;
+    margin : auto;
+    display : table;
+}
+
+body {
+    height : 100%;
+    color : green;
+    text-align : center;
+    display : table-cell;
+    vertical-align : middle;
+    background-color : black;
+}
+
+.well {
+    background-color : black;
+}
+
+hr {
+    border : 1px solid gray;
+}
+
+.countdown {
+    padding : auto;
+}
+
+.holiday {
+    margin : 5px;
+    font-size : 18px;
+    animation: infinite;
+    animation-name: oo;
+    animation-duration: 1.5s;
+}
+@keyframes oo{
+    0% {color: pink;}
+    25% {color: red;}
+    50% {color: yellow;}
+    75% {color: #ff99ff;}
+    100% {color: orange;}
+}
+
+.num {
+    font-size : 15px;
+    font-weight : bold;
+}
+
+.txt {
+    font-size : 10px;
+}
+
+audio{
+	display:none; 
+}

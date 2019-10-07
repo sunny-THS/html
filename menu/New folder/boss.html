@@ -1,0 +1,40 @@
+<html lang="vi">
+ 
+<head>
+    <title>Bí mật</title>
+	<meta charset="UTF-8"/>
+	<link href="qd/boss.css" type="text/css" rel="stylesheet">
+	<script src="qd/boss.js" language="javascript" type="text/javascript"></script>
+	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+	<link rel="icon" type="image/png" href="http://imgur.com/CILKGax.png"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+
+<body>
+	<header>Hello</header>
+	<textarea></textarea>
+	<button class="fb" onclick="face()";>
+		<i class="fa fa-4x fa-facebook"></i>
+	</button>
+</div>
+<script type="text/javascript">
+	$(document).ready(function csdl(){
+				var textarea = $("textarea")[0];
+				var statements = "Anh biết em có thể vào được đây\nAnh đã làm em buồn rất là nhiều\nMong em có thể tha thứ cho anh những lần anh làm em buồn có được không?\nAnh biết điều đó có thể khó nhưng anh muốn chúng ta có thể giữ được tình cảm này được lâu dài hơn\n			❤️I love you forever❤️";
+				var counter = 0;
+
+				setInterval(function(){
+					textarea.innerHTML += 
+					statements.charAt( counter );
+					counter++;
+				}, 80)
+				var x = setInterval(function(){   
+					$("textarea").scrollTop($("textarea")[0].scrollHeight)
+					},0);
+					setTimeout(function(){clearInterval(x)},70000)
+			});
+</script>
+</body>
+ 
+</html>

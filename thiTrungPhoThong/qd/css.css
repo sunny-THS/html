@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    color : green;
+    background-color : black;
+    overflow: hidden;
+}
+
+.well {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -60%);
+    border-radius: 20px;
+    background-color : black;
+    opacity: 1;
+    animation: a1 ease-in .5s 7;
+}
+
+hr {
+    border : 1px solid gray;
+}
+
+.countdown {
+    padding : 15px;
+}
+
+.holiday {
+  font-family: 'Pacifico', cursive;
+  margin: 10px auto;
+  font-size: 50px;
+  color: green;
+}
+
+.tieuDe {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 100px;
+  opacity: 1;
+  animation: a1 ease-in .5s 7;
+}
+@keyframes a1 {
+  from{
+    opacity: 0;
+    transition: all 5s ease;
+  }
+  to {opacity: 1}
+}
+.num {
+    font-size : 15px;
+    font-weight : bold;
+}
+
+.txt {
+    font-size : 10px;
+}
+@media only screen and (min-width: 570px) and (max-width: 720px) {
+  .holiday {
+    font-size: 300%;
+  }
+}
+@media only screen and (min-width: 380px) and (max-width: 570px) {
+  .holiday {
+    font-size: 200%;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .holiday {
+    font-size: 180%;
+  }
+}

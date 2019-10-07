@@ -1,0 +1,17 @@
+body{
+	background:pink;
+}
+textarea{	
+	position: relative;
+	height: 650px;
+	width: 100%;
+	font-family: 'Dancing Script', cursive;
+	background:pink;
+	color: blue;
+	font-size: 50px;
+	margin: 25px 0;
+    display: block;
+    resize: none;
+	font-weight: bolder;
+	border: none;
+}

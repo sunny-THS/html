@@ -1,0 +1,278 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+}
+
+/*page 1*/
+.header {
+  position: absolute;
+  font-family: 'Bad Script', cursive;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 50px;
+  color: #000;
+}
+.header span {
+  margin: 0;
+  padding: 0;
+  animation: aa 7.5s linear infinite;
+}
+@keyframes aa {
+  0%, 100% {
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #00b3ff,
+                0 0 20px #00b3ff,
+                0 0 40px #00b3ff,
+                0 0 80px #00b3ff,
+                0 0 120px #00b3ff,
+                0 0 200px #00b3ff,
+                0 0 300px #00b3ff,
+                0 0 40px #00b3ff;
+  }
+  5%, 95% {
+    color: #111;
+    filter: blur(0);
+  }
+}
+
+h1 span:nth-child(1) {
+  animation-delay: 0s;
+}
+h1 span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 1s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 2s;
+}
+h1 span:nth-child(7) {
+  animation-delay: 2.5s;
+}
+h1 span:nth-child(8) {
+  animation-delay: 3s;
+}
+h1 span:nth-child(9) {
+  animation-delay: 3.5s;
+}
+h1 span:nth-child(10) {
+  animation-delay: 4s;
+}
+h1 span:nth-child(11) {
+  animation-delay: 4.5s;
+}
+h1 span:nth-child(12) {
+  animation-delay: 5s;
+}
+h1 span:nth-child(13) {
+  animation-delay: 5.5s;
+}
+h1 span:nth-child(15) {
+  animation-delay: 6s;
+}
+h1 span:nth-child(16) {
+  animation-delay: 6.5s;
+}
+h1 span:nth-child(17) {
+  animation-delay: 7s;
+}
+/*bánh*/            /*page 2*/
+.cake{
+	position: absolute;
+	width: 70%;
+	height: 600px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+	display: none;
+}
+.plate {
+	width: 470px;
+	height: 310px;
+	position: absolute;
+	top: 165px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #ccc;
+	border-radius: 50%;
+	box-shadow: 0 2px 0 #b3b3b3,
+							0 4px 0 #b3b3b3,
+							0 6px 0 #b3b3b3,
+							0 8px 0 #b3b3b3,
+							0 10px 40px #333,
+							0 12px 40px #222,
+							0 13px 40px #111;
+}
+.layer {
+	position: absolute;
+	display: block;
+	width: 450px;
+	height: 300px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 50%;
+	background-color: #553c13;
+	box-shadow: 0 2px 0px #6a4b18,
+							0 4px 0px #33240b,
+							0 6px 0px #32230b,
+							0 8px 0px #31230b,
+							0 10px 0px #30220b,
+							0 12px 0px #2f220b,
+							0 14px 0px #2f210a,
+							0 16px 0px #2e200a,
+							0 18px 0px #2d200a,
+							0 20px 0px #2c1f0a,
+							0 22px 0px #2b1f0a,
+							0 24px 0px #2a1e09,
+							0 26px 0px #2a1d09,
+							0 28px 0px #291d09,
+							0 30px 0px #281c09;
+}
+.layer-top {
+	top: 64px;
+}
+.layer-middle {
+	top: 97px;
+}
+.layer-bottom {
+	top: 130px;
+}
+.icing {
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #f0e4d0;
+	width: 430px;
+	height: 290px;
+	border-radius: 50%;
+}
+.icing:before {
+	content: "Happy birthday to you, Vy💓!";
+	position: absolute;
+	width: 75%;
+	top: 50%;
+	left: 65%;
+	transform: translate(-65%,-50%);
+	font-family: 'Indie Flower', cursive;
+	font-size: 45px;
+	text-align: center;
+	color: #281c09;
+	border-radius: 50%;
+	z-index: 1;
+}
+.candle {
+	position: absolute;
+	background-color: #7b020b;
+	width: 16px;
+	height: 50px;
+	border-radius: 8px / 4px;
+	top: 165px;
+	left: 50%;
+	transform: translateX(-48%);
+	box-shadow: -5px -6px 10px #444;
+}
+.candle:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #ad030f;
+}
+.candle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-radius: 15px;
+  transform: translateY(-50%) rotate(25deg);
+  height: 2px;
+  width: 100%;
+  box-shadow: -2px -5px rgb(252,0,204),
+              2px 5px 0 rgb(0,247,255),
+              4px 10px 0 rgb(66,252,0);
+  background: rgb(255,0,0);
+}
+.blink{
+		position: absolute;
+		background: #333;
+		width: 2px;
+		height: 8px;
+		top: -2px;
+		left: 50%;
+
+}
+.flame {
+	position: absolute;
+	background-color: orange;
+	width: 15px;
+	height: 35px;
+	border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
+	top: -34px;
+	left: 50%;
+	margin-left: -7.5px;
+	opacity: 1;
+	z-index: 1;
+	transition: all .5s ease-out;
+	box-shadow: 0 0 10px rgba(255, 165, 0, 0.5),
+							0 0 20px rgba(255, 165, 0, 0.5),
+							0 0 60px rgba(255, 165, 0, 0.5),
+							0 0 80px rgba(255, 165, 0, 0.5);
+	transform-origin: 50% 90%;
+	animation: flicker 0.9s ease-in-out alternate infinite;
+}
+.candle:hover .flame {
+	opacity: 0;
+	transition: all 1s ease-out;
+}
+@keyframes flicker {
+	0% {
+		transform: skewX(5deg);
+		box-shadow: 0 0 10px rgba(255, 165, 0, 0.2),
+								0 0 20px rgba(255, 165, 0, 0.2),
+								0 0 60px rgba(255, 165, 0, 0.2),
+								0 0 80px rgba(255, 165, 0, 0.2);
+	}
+	25% {
+		transform: skewX(-5deg);
+		box-shadow: 0 0 10px rgba(255, 165, 0, 0.5),
+								0 0 20px rgba(255, 165, 0, 0.5),
+								0 0 60px rgba(255, 165, 0, 0.5),
+								0 0 80px rgba(255, 165, 0, 0.5);
+	}
+	50% {
+		transform: skewX(10deg);
+		box-shadow: 0 0 10px rgba(255, 165, 0, 0.3),
+								0 0 20px rgba(255, 165, 0, 0.3),
+								0 0 60px rgba(255, 165, 0, 0.3),
+								0 0 80px rgba(255, 165, 0, 0.3);
+	}
+	75% {
+		transform: skewX(-10deg);
+		box-shadow: 0 0 10px rgba(255, 165, 0, 0.4),
+								0 0 20px rgba(255, 165, 0, 0.4),
+								0 0 60px rgba(255, 165, 0, 0.4),
+								0 0 80px rgba(255, 165, 0, 0.4);
+	}
+	100% {
+		transform: skewX(5deg);
+		box-shadow: 0 0 10px rgba(255, 165, 0, 0.5),
+								0 0 20px rgba(255, 165, 0, 0.5),
+								0 0 60px rgba(255, 165, 0, 0.5),
+								0 0 80px rgba(255, 165, 0, 0.5);
+	}
+}

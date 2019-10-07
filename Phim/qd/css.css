@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+html {
+  cursor: url(../cursor/cursor.png),auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: rgba(60,120,254,.85);
+  overflow: hidden;
+}
+#main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 65%;
+  background: rgba(238,238,238,.59);
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 3px 4px 0 rgba(41,34,34,.8);
+}
+.title-page {
+  text-align: center;
+  top: 50%;
+  font-size: 70px;
+  color: #fefefe;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-style: italic;
+  font-family: 'Indie Flower', cursive;
+  text-shadow: 2px -2px 10px rgba(122,236,52,.95),
+               2px 2px 20px rgba(25,209,241,.95);
+}
+#clock{
+	font-family: Segment7Standard, cursive;
+	text-align:center;
+  color: #fefefe;
+  margin-top: 25px;
+  letter-spacing:2px;
+	top: 0;
+	left: 0;
+	right: 0;
+  font-size: 350%;
+  z-index: 1;
+}
+#clock span{
+	font-family: 'Indie Flower', cursive;
+}
+ .p {
+   position: absolute;
+   -webkit-animation: quay1 infinite 1.5s linear;
+   -moz-animation: quay1 infinite 1.5s linear;
+   -o-animation: quay1 infinite 1.5s linear;
+   animation: quay1 infinite 1.5s linear;
+ }
+ .p:hover {
+   cursor: url(../cursor/cs.png), auto;
+   -webkit-animation: quay2 infinite 1.5s linear;
+   -moz-animation: quay2 infinite 1.5s linear;
+   -o-animation: quay2 infinite 1.5s linear;
+   animation: quay2 infinite 1.5s linear;
+ }
+ .p:nth-child(1) {
+   left: 0;
+ }
+ .p:nth-child(2) {
+   right: 0;
+ }
+ .p:nth-child(3) {
+   left: 0;
+   bottom: 0;
+ }
+ .p:nth-child(4) {
+   right: 0;
+   bottom: 0;
+ }
+
+ .info {
+   margin: 10px;
+   border-radius: 50%;
+   padding: 0;
+   box-shadow: inset 2px 3px 10px rgba(31,27,28,.82);
+   cursor: url(../cursor/pointer.png),auto;
+ }
+ .info:hover {
+   margin: 9px;
+   opacity: .8;
+ }
+ .info:active {
+  opacity: 1;
+ }
+ .huongDan {
+   position: absolute;
+   width: 50%;
+   background: rgba(246,49,49,.8);
+   padding: 25px;
+   border-radius: 25px;
+   color: #fefefe;
+   left: 50%;
+   top: 50%;
+   font-size: 20px;
+   font-family: 'Pacifico', cursive;
+   transform: translate(-50%, -50%);
+   text-indent: 15px;
+   z-index: 100;
+   display: none;
+ }
+ .huongDan span {
+   position: absolute;
+   left: 10px;
+   top: 10px;
+   font-size: 30px;
+   opacity: .5;
+ }
+ .huongDan span:hover {
+   opacity: 1;
+   color: rgba(0,0,0,.94);
+   cursor: url(../cursor/cs.png),auto;
+ }
+
+.luaChon {
+  position: absolute;
+  left: 30%;
+  width: 34%;
+  padding: 5px;
+  height: 64px;
+  border-radius: 20px;
+  box-shadow: 3px 4px 5px rgb(22,19,20);
+  background: DodgerBlue;
+}
+/*--- list lựa chọn --*/
+ /*the container must be positioned relative:*/
+.custom-select {
+  position: absolute;
+  font-size: 25px;
+  font-family: 'Pacifico', cursive;
+  width: 200px;
+  border: none;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+  height: 45px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.select-selected:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fefefe transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fefefe transparent;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: url(../cursor/cs.png), auto;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  height: 250px;
+  width: 400px;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/*-------------scrol of select---------------*/
+/* width */
+.select-items::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.select-items::-webkit-scrollbar-track {
+  border:none;
+  border-radius: 50%;
+}
+
+/* Handle */
+.select-items::-webkit-scrollbar-thumb {
+  background: rgba(208,208,208,.98);
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+.select-items::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+/*-----------------------*/
+ .buttonGoToF {
+   position: absolute;
+   right: 5px;
+   top: 12%;
+   font-size: 30px;
+   width: 100px;
+   border-radius: 15px;
+   font-family: 'Pacifico', cursive;
+   color: #fff;
+   background: DodgerBlue;
+   border: none;
+   -webkit-perspective: 800px;
+   -moz-perspective: 800px;
+   -o-perspective: 800px;
+   perspective: 800px;
+   -webkit-transform-style: preserve-3d;
+   -moz-transform-style: preserve-3d;
+   -o-transform-style: preserve-3d;
+   transform-style: preserve-3d;
+   -webkit-transform: rotate3d(0, 1, 1, 0deg);
+   -moz-transform: rotate3d(0, 1, 1, 0deg);
+   -o-transform: rotate3d(0, 1, 1, 0deg);
+   transform: rotate3d(0, 1, 1, 0deg);
+   transition: all 1.5s ease-in;
+   cursor: url(../cursor/cs.png), auto;
+   outline: 0;
+ }
+ .buttonGoToF:hover {
+   -webkit-transform: rotate3d(1, 0, -1, 359deg);
+   -moz-transform: rotate3d(1, 0, -1, 359deg);
+   -o-transform: rotate3d(1, 0, -1, 359deg);
+   transform: rotate3d(1, 0, -1, 359deg);
+   background-color: rgba(0, 0, 0, 0.1);
+   opacity: .5;
+   transition: transform 1.5s ease-in;
+ }
+ .buttonGoToF:active {
+   opacity: 1;
+ }
+ @-webkit-keyframes quay1 {
+   0% {transform: rotate(0deg);}
+   100% {transform: rotate(359deg);}
+ }
+ @-moz-keyframes quay1 {
+   0% {transform: rotate(0deg);}
+   100% {transform: rotate(359deg);}
+ }
+ @-o-keyframes quay1 {
+   0% {transform: rotate(0deg);}
+   100% {transform: rotate(359deg);}
+ }
+ @keyframes quay1 {
+   0% {transform: rotate(0deg);}
+   100% {transform: rotate(359deg);}
+ }
+
+ @-webkit-keyframes quay2 {
+   0% {transform: rotate(360deg);}
+   100% {transform: rotate(1deg);}
+ }
+ @-moz-keyframes quay2 {
+   0% {transform: rotate(360deg);}
+   100% {transform: rotate(1deg);}
+ }
+ @-o-keyframes quay2 {
+   0% {transform: rotate(360deg);}
+   100% {transform: rotate(1deg);}
+ }
+ @keyframes quay2 {
+   0% {transform: rotate(360deg);}
+   100% {transform: rotate(1deg);}
+ }
+/*----------------responsive-------------------*/
+@media only screen and (min-width: 570px) and (max-width: 720px) {
+
+}

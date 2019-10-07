@@ -1,0 +1,27 @@
+body{-webkit-touch-callout: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;margin:0;padding:0;background-image:url("https://i.imgur.com/9SHW2XH.jpg");background-size:cover;background-repeat:no-repeat;font-size:14px;font-family:'sans-serif','sans-serif',sans-serif;color:#660086;overflow:auto}
+a {color:##00ff45;font-size:14px;text-decoration:none;}
+#main{width:100%;}
+#wrap{position:relative;margin:0 auto;width:1100px;height:680px;margin-top:10px;}
+#text{width:400px;height:425px;left:40px;top:100px;position:absolute;}
+#code{display:none;font-size:20px;}
+#code{width: 500px; color: #3b6900; font-family: 'Pacifico', cursive;}
+#clock-box {position:absolute;left:60px;top:550px;font-size:28px;display:none;}
+#clock-box a {font-size:28px;text-decoration:none;}
+#clock{margin-left:48px;}
+#clock .digit {font-size:64px;}
+#canvas{margin:0 auto;width:1100px;height:680px;}
+#error{margin:0 auto;text-align:center;margin-top:60px;display:none;}
+.hand{cursor:pointer;}
+.space{margin-right:150px;}
+.center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width: 50%;z-index:1000}
+.khung{position:relative;width:100%;background:rgb(255, 255, 255);border-radius:25px;box-shadow:inset 1px -2px 15px rgb(11, 11, 11);text-align:center;}
+.khung h1{font-size:50px;color:rgb(52, 195, 195); text-shadow:4px 5px #262626;font-family: 'Pacifico', cursive;margin-bottom:10px;text-decoration: underline;}
+.khung span{position:absolute;font-size:25px;left:3%;top:3%;font-weight:bold;color:rgb(0, 0, 0);cursor:pointer;opacity:.2}
+.khung span:hover{opacity:1}
+.khung span:active{color:rgb(0, 255, 240);}
+.khung p{color:#000;font-size:30px;padding: 5px 20px;margin:0;text-align:justify;font-family: 'Pacifico', cursive;}

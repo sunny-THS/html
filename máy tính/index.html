@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>máy tính</title>
+        <meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="qd/css.css"/>
+        <script type="text/javascript" src="qd/js.js"></script>
+		<link rel="icon" type="image/png" href="http://imgur.com/CILKGax.png">
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </head>
+    <body>
+        <div class="sheet">
+            <form name="form">
+                <input type="text" name="result" id="result" disabled/>
+                <input type="text" name="xuat" id="xuat" disabled/>
+            </form>
+            <table>
+                <tr>
+                    <td><input type="button" value="√" onclick="canbac2()"></td>
+                    <td><input type="button" value="x²" onclick="binhPhuong()"/></td>
+                    <td><input type="button" value="x³" onclick="lapPhuong()"/></td>
+                    <td><input type="button" value="xⁿ" onclick="xMuN()"/></td>
+                    <td><input type="button" value="sin" onclick="lgs()"/></td>
+                    <td><input type="button" value="Del" style="background:linear-gradient(-60deg, #ff7600, #ff0000);" onclick="del()"></td>
+                    <td><input type="button" value="C" style="background:linear-gradient(60deg, #ff7600, #ff0000)" onclick="delAll()"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" onclick="i(1)"></td>
+                    <td><input type="button" value="2" onclick="i(2)"></td>
+                    <td><input type="button" value="3" onclick="i(3)"></td>
+                    <td><input type="button" value="/" onclick="i('/')"></td>
+					<td><input type="button" value="cos" onclick="lgc()"/></td>
+                    <td><input type="button" value="(" onclick="i('(')"></td>
+                    <td><input type="button" value=")" onclick="i(')')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" onclick="i(4)"></td>
+                    <td><input type="button" value="5" onclick="i(5)"></td>
+                    <td><input type="button" value="6" onclick="i(6)"></td>
+                    <td><input type="button" value="*" onclick="i('*')"></td>
+					<td><input type="button" value="tan" onclick="lgt()"/></td>
+                    <td><input type="button" value="sin-" onclick="lgas()"/></td>
+                    <td><input type="button" value="cos-" onclick="lgac()"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" onclick="i(7)"></td>
+                    <td><input type="button" value="8" onclick="i(8)"></td>
+                    <td><input type="button" value="9" onclick="i(9)"></td>
+                    <td><input type="button" value="-" onclick="i('-')"></td>
+					<td><input type="button" value="cot" onclick="lgco()"/></td>
+                    <td><input type="button" value="tan-" onclick="lgat()"/></td>
+                    <td><input type="button" value="cot-" onclick="lgaco()"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="." onclick="i('.')"></td>
+                    <td><input type="button" value="0" onclick="i(0)"></td>
+                    <td><input type="button" value="π" onclick="i('π')"/></td>
+                    <td><input type="button" value="+" onclick="i('+')"/></td>
+                    <td><input type="button" value="=" onclick="equal()"/></td>
+                    <td colspan="2" id="ans">ANS</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

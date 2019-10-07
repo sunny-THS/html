@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+		function initialize() {
+			cbox = document.querySelector('.cbox');
+			qtn = document.querySelector('.qtn');
+			customAlert("Alert with tags.<br><b>Testing</b>");
+		}
+		function customAlert(s) {
+			qtn.innerHTML = s;
+			document.body.style.backgroundColor = '#d0d0d0';
+			cbox.style.zIndex = 99;
+			cbox.style.display = 'flex';
+		}
+		function onOk(e) {
+			cbox.style.zIndex = -99;
+			cbox.style.display = 'none';
+			document.body.style.backgroundColor = 'white';
+			e.preventDefault();
+		}
+	</script>
+</head>
+<body onload="initialize();">
+    <div class="cbox">
+		<div class="inputbox">
+			<form name="form">
+				<h3>Alert</h3>
+				<h5 class="qtn"></h5>
+				<div class="btns">
+				<button class="ok" onclick="onOk(event);">OK</button>
+				</div>
+			</form>
+		</div>
+    </div>
+</body>
+</html>
+<style type="text/css">
+form h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+form h5 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 2em;
+    font-weight: 400;
+}
+.cbox {
+	margin: auto;
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 60vw;
+    height: 100vh;
+    z-index: -99;
+}
+.inputbox {
+    padding: 20px;
+    width: 100%;
+	text-align: center;
+    background: white;
+    color: black;
+	background: pink;
+    -webkit-box-shadow: 0 0 30px grey;
+       -moz-box-shadow: 0 0 30px grey;
+            box-shadow: 0 0 30px grey;
+    margin: auto;
+    
+}
+.btns {
+    margin-top: 50px;
+    float: right;
+    width: 40px;
+    background: transparent;
+    border: none;
+    margin-left: 30px;
+    color: white;
+    font-weight: 600;
+}
+</style>

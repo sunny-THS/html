@@ -1,0 +1,29 @@
+<div class="container" id="main" role="main">
+		<ul class="menu">
+			<li><a href="#" style='font-size:50px'>❤️</a></li>
+			<li><a href="https://www.facebook.com/profile.php?id=100007197888353">Home</a></li>
+			<li><a href="#s1">Gift</a>
+				<ul class="submenu">
+					<li><a href="index2.html">Love</a></li>
+					<li><a href="ontap.html">Ôn tập</a></li>
+				</ul>
+			</li>
+			<li class="active"><a href="#s2">holidays</a>
+				<ul class="submenu">
+					<li><a href="1.html">năm mới</a></li>
+					<li><a href="sinhnhat.html">21-05</a></li>
+				</ul>
+			</li>
+            <li><a href="tkb.html">TKB</a></li> 
+			<li><a href="chat.html">Chat</a></li>         
+			<li><a href="#">game</a>
+				<ul class="submenu">
+					<li><a href="snake.html">snake</a></li>
+					<li><a href="tree.html">tree</a></li>
+					<li><a href="new.html">vui mắt</a></li>
+                </ul>
+			</li>    
+			<!-- <li><a href="#" style='font-size:50px'>❤️</a></li> -->
+		</ul>
+	</div>
+	</div>

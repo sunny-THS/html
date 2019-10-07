@@ -1,0 +1,109 @@
+html {
+	cursor: url(../cursor/cs.png),auto;
+}
+body{
+	background-image: url("../img/jax.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+	margin: 0;
+	padding: 0;
+	overflow:hidden;
+}
+
+#clock{
+	position: absolute;
+	font-family: Segment7Standard, cursive;
+	text-align: center;
+  color: #fff;
+  letter-spacing:2px;
+  top: 25%;
+  left: 18%;
+  transform: translate(-50%, -95%);
+  font-size: 300%;
+  text-shadow: 5px 3px 25px white;
+	background: rgba(130,212,242,.72);
+	padding: 10px 20px;
+	border-radius: 0 50px 50px 50px;
+	display: none;
+	z-index: 99;
+}
+#clockf {
+	position: absolute;
+	cursor: url(../cursor/pointer.png),auto;
+	z-index: 100;
+}
+#clock span{
+	font-family: Sriracha, cursive;
+}
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 50px;
+  width: 50%;
+  transform: translate(-50%, -50%);
+}
+#fb, #gl, #yt  {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  transition: all .5s ease;
+	cursor: url(../cursor/cursor.png),auto;
+}
+#fb {
+  left: 0;
+  background: #4267b2;
+	transform: rotate(0deg);
+}
+#gl {
+  right: 0;
+  background: #dd4b39;
+	transform: rotate(0deg);
+}
+#yt {
+  left: 50%;
+	background: #fff;
+  color: #dd4b39;
+  transform: translateX(-50%) rotateY(0deg) perspective(1000);
+}
+h1 {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#fb:hover, #gl:hover, #yt:hover {
+  height: 100px;
+  width: 100px;
+}
+#fb:hover {
+  box-shadow: inset 0 0 20px #262626;
+  top: -5px;
+  left: 5px;
+  transform: rotate(360deg);
+}
+#gl:hover {
+  box-shadow: inset 0 0 20px #262626;
+  top: -5px;
+  right: 5px;
+  transform: rotate(-360deg);
+}
+#yt:hover {
+  box-shadow: inset 0 0 20px #262626;
+  top: -5px;
+  transform: rotateY(360deg);
+}
+
+#fb:hover h1, #gl:hover h1, #yt:hover h1 {
+  font-size: 45px;
+}
+
+#fb:active, #gl:active, #yt:active {
+  opacity: .8;
+}

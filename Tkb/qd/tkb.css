@@ -1,0 +1,205 @@
+body {
+  font-family: 'Pacifico', cursive;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer */
+  -khtml-user-select: none;
+  /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none;
+  /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none;
+  /* Disable Android and iOS callouts*/
+}
+
+h1 {
+  font-family: 'Sriracha', cursive;
+  font-size: 80px;
+  color: #000000;
+  text-align: center;
+  margin: 0;
+  text-shadow: 4px 3px 0px rgb(255, 255, 255), 9px 8px 0px rgb(0, 0, 0);
+}
+
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border: 2px solid rgba(0, 0, 0, 0.82);
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+  color: #000000;
+  font-size: 25px;
+}
+
+.sh {
+  box-shadow: inset 0px 0px 20px 10px rgba(103, 103, 103, 0.62);
+  color: #000000;
+  text-shadow: none;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.section {
+  transition: all .5s ease-in;
+}
+
+/*khung chỉnh sửa*/
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 1);
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #000;
+  box-shadow: 3px 5px 5px rgb(0, 0, 0);
+  background: rgba(255, 0, 0, 0.71);
+  z-index: 10000;
+  opacity: 0;
+  transition: all 1s ease-in;
+}
+
+.inData {
+  border-radius: 25px;
+  border: 1px solid #000;
+  padding: 15px 20px;
+  background: #000;
+  box-shadow: inset 0 0 20px 10px rgba(255, 0, 0, 0.5);
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer */
+  -khtml-user-select: none;
+  /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none;
+  /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none;
+  /* Disable Android and iOS callouts*/
+}
+
+.d {
+  cursor: default;
+  font-family: 'Pacifico', cursive;
+  color: #000;
+  font-size: 80px;
+  text-align: center;
+  margin: 0;
+  text-shadow: 4px 3px 0px #f00, 9px 8px 0px rgb(0, 0, 0);
+}
+
+#close {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  font-size: 20px;
+  opacity: .5;
+  transition: .5s all ease;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+#close:hover {
+  opacity: 1
+}
+
+.inpt {
+  display: block;
+  width: 150px;
+  outline: none;
+  margin-bottom: 5px;
+  border: 2px solid #000;
+  text-indent: 5px;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+}
+
+.day .s {
+  float: left;
+}
+.day .af {
+  float: right;
+}
+.inpt::placeholder {
+  font-family: 'Pacifico', cursive;
+  color: rgba(0, 0, 0, 0.46);
+}
+
+.inpt::-webkit-placeholder {
+  font-family: 'Pacifico', cursive;
+  color: rgba(0, 0, 0, 0.46);
+}
+
+.inpt::-moz-placeholder {
+  font-family: 'Pacifico', cursive;
+  color: rgba(0, 0, 0, 0.46);
+}
+
+.inpt:-ms-placeholder {
+  font-family: 'Pacifico', cursive;
+  color: rgba(0, 0, 0, 0.46);
+}
+
+.inpt:-moz-placeholder {
+  font-family: 'Pacifico', cursive;
+  color: rgba(0, 0, 0, 0.46);
+}
+
+.inpt:focus {
+  border: none;
+  border-bottom: 3px solid rgb(255, 0, 0);
+  box-shadow: inset 0 -10px 10px rgba(138, 138, 138, 0.65);
+}
+
+.day {
+  color: #fff;
+  font-size: 30px;
+  display: none;
+}
+
+.day:nth-child(1) {
+  display: block;
+}
+
+#b {
+  position: relative;
+  float: right;
+}
+
+#save, #back {
+  font-family: 'Pacifico', cursive;
+  font-size: 23px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+#back {
+  display: none;
+}
+
+#save:hover, #back:hover {
+  background: rgb(255, 0, 0);
+  box-shadow: 2px 3px 5px rgb(209, 209, 209);
+  color: #fff;
+}
+
+#data {
+  position: absolute;
+  top: 40px;
+  left: 90%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}

@@ -1,0 +1,183 @@
+body {
+	margin: 0;
+    padding: 0;
+	text-align: center;
+	background:pink;
+	/* cursor: url('../img/heart.png'), auto;  */
+}
+
+
+h1{
+	position: relative;
+	margin: 0 0 50px 0 ;
+	font-family: 'Dancing Script', cursive;
+	color: #fff;
+	font-size: 100px;
+	font-style:italic;
+	text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+	z-index: 1;
+}
+
+p{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.khung{
+	position: relative;
+}
+textarea{
+	height: 650px;
+	width: 100%;
+	font-family: 'Dancing Script', cursive;
+	background:pink;
+	color: #fff;
+	font-size: 50px;
+	margin: 25px 0;
+  display: block;
+  resize: none;
+	font-weight: bolder;
+	border: none;
+}
+
+#menu{
+	position: fixed;
+    left: 2%;
+    top: 2%;
+    transform: translate(-2%, -2%);
+	display: inline-block;
+	z-index: 100;
+
+}
+.toggle{
+    position: absolute;
+    left: 0;
+    top: 0;
+	height: 50px;
+    width: 50px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.toggle span{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%) rotate(0deg);
+    width: calc(100% - 14px);
+    height: 3px;
+    background: #262626;
+    box-shadow: 0 -12px 0 #262626, 0 12px 0 #262626;
+    transition: transform 0.5s 0s, box-shadow 0.5s 1s;
+}
+.toggle.active span{
+    box-shadow: 50px -12px 0 #262626, -50px 12px 0 #262626;
+    transform: translate(-50%,-50%) rotate(-315deg);
+    transition: transform 0.5s 0.5s, box-shadow 0.5s 0s;
+}
+.toggle span:before{
+    content:'';
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translate(-50%, -50%);
+    height: 36px;
+    width: 3px;
+    background: #262626;
+    transition: all 0.5s 0.5s;
+}
+.toggle.active span:before{
+    top: 50%;
+    transition-delay: 1s;
+}
+
+#submenu{
+	display: none;
+	min-width: 150px;
+	height: auto;
+	position: fixed;
+	top: 55px;
+}
+#submenu #sub a{
+	text-decoration: none;
+	color: #fff;
+}
+#submenu #sub{
+	width: 100%;
+	height: 50px;
+	margin-bottom: 5px;
+	background: #262626;
+	text-align: center;
+	line-height: 50px;
+	text-transform: capitalize;
+	font-size: 30px;
+	position: relative;
+	float: left;
+	border: none;
+	display: inline-block;
+	transition: all 2s ease-in 2s, border .5s;
+}
+#sub1, #sub2, #sub3{
+	display: none;
+	width: 150px;
+	height: 50px;
+	left: 160px;
+	margin-bottom: 5px;
+	background: #262626;
+	text-align: center;
+	line-height: 50px;
+	text-transform: capitalize;
+	font-size: 30px;
+	position: absolute;
+	float: left;
+	border: none;
+	transition: all 2s ease-in 2s, border .5s;
+
+}
+#sub1{
+	top: 55px;
+}
+#sub2{
+	top: 110px;
+}
+#sub3{
+	bottom: 0;
+}
+
+#sub1 > #sub:hover{
+	border-left: 5px solid red;
+}
+#sub2 > #sub:hover{
+	border-left: 5px solid red;
+}
+#sub3 > #sub:hover{
+	border-left: 5px solid red;
+}
+
+#submenu #sub a span{
+	margin: 0 10px 0 0;
+}
+#submenu > #sub:hover{
+	border-left: 5px solid red;
+	left: 20px;
+}
+
+
+@media only screen and (max-width : 600px) {
+	h1{
+		font-size: 500%;
+	}
+	textarea{
+		font-size: 30px;
+	}
+	.khung img{
+		width: 80%;
+		margin-top: 20px;
+	}
+}

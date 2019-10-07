@@ -1,0 +1,60 @@
+html {
+	min-height: 100%;
+	min-width: 100%;
+}
+header{
+	text-align: center;
+	font-size: 6em;
+	font-family: 'VT323', monospace;
+
+}
+body {
+	margin: 0;
+	padding: 10px;
+	box-sizing: border-box;
+	background-color: #000;
+	font-size: 1.5rem;
+	color: rgba(128, 255, 128, 0.8);
+	text-shadow: 0 0 1ex #33ff33, 0 0 2px rgba(255, 255, 255, 0.8);
+}
+.fb{
+	position: absolute;
+	display: inline-block;
+	background: #fff;
+	border: 2px solid rgba(128, 255, 128, 0.8);
+	border-radius: 50%;
+	text-align: center;
+	height: 80px;
+	width: 80px;
+	margin:0;
+	left: 50px;
+	top: 50px;
+	box-shadow: 2px 2px 5px #eee;
+	transform: rotateZ(-360deg);
+	transition: 1s;
+	color: rgba(128, 255, 128, 0.8);
+	z-index: 1;
+}
+.fb:hover{
+	transform: rotateZ(720deg);
+	transition: 1s;
+	color: #fff;
+	background: #3b5999;
+	border: 2px solid #3b5999;
+}
+.fb:active{
+	background: #ccc;
+	border: 2px solid #ccc;
+}
+textarea{
+	height: 400px;
+	width: 100%;
+	font-family: 'VT323', monospace;
+	background: #000;
+	color: rgba(128, 255, 128, 0.8);
+	font-size: 50px;
+	margin: 25px 0;
+    display: block;
+    resize: none;
+	border: none;
+}

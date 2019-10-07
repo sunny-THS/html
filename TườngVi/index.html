@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HappyBirthdayToYou</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name='theme-color' content="#0f0f0fs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="http://icons.iconarchive.com/icons/visualpharm/happy-easter/64/cake-icon.png">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="qd/js.js"></script>
+    <link rel="stylesheet" href="qd/css.css">
+</head>
+<body>
+  <div class="hello">Click</div>
+  <div class="tim1"></div>
+  <div class="tim2"></div>
+    <div class="well container countdown" id="countdown0">
+        <h1 class="holiday">
+          <span>H</span>
+          <span>a</span>
+          <span>p</span>
+          <span>p</span>
+          <span>y</span>
+          <span></span>
+          <span>B</span>
+          <span>i</span>
+          <span>r</span>
+          <span>t</span>
+          <span>h</span>
+          <span></span>
+          <span>D</span>
+          <span>a</span>
+          <span>y</span>
+        <hr></h1>
+        <div class="row num">
+            <div id="daysBox" class="col-xs-2"></div>
+            <div class="col-xs-1">:</div>
+            <div id="hoursBox" class="col-xs-2"></div>
+            <div class="col-xs-1">:</div>
+            <div id="minsBox" class="col-xs-2"></div>
+            <div class="col-xs-1">:</div>
+            <div id="secsBox" class="col-xs-2"></div>
+        </div>
+        <div class="row txt">
+            <div class="col-xs-2">Days</div>
+            <div class="col-xs-1">|</div>
+            <div class="col-xs-2">Hours</div>
+            <div class="col-xs-1">|</div>
+            <div class="col-xs-2">Minutes</div>
+            <div class="col-xs-1">|</div>
+            <div class="col-xs-2">Seconds</div>
+        </div>
+    </div>
+    <audio id="pl" src="https://aredir.nixcdn.com/NhacCuaTui966/ThatGirl-OllyMurs-4673032.mp3?st=hWIrArVgZCmfCk56zajyuw&e=1546347879&t=1546261478173" loop></audio>
+    <script type="text/javascript">
+      $('.hello').click(function() {
+        $('.hello').css({'display':'none'});
+        $('#pl')[0].play();
+      });
+    </script>
+</body>
+</html>

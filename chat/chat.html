@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <title>App chat</title>
+    <meta charset="UTF-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link rel="icon" type="image/png" href="http://imgur.com/CILKGax.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- AngularJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+
+<style>body{
+
+    padding: 0 25%;
+    background: #fdcfcf;
+    margin:0;
+    padding:0;
+}
+
+.onl{
+    position: absolute ;
+    border-radius: 50%;
+    background: green;
+    border: 2px solid green;
+    padding: 5px;
+    top: 20px;
+    left: 5px;
+    z-index: 1;
+}
+h1{
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 25px;
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.st{
+    position: absolute;
+    height: 74px;
+    width:74px;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+h2{
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+    border: 2px solid #ff0099;
+    text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.chat{
+    position: relative;
+    width:100%;
+}
+.ten{
+    color: #fff;
+}
+span{
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+}
+#chatBox{
+    position: relative;
+    background: pink;
+    border-top: 64px #ff0099 solid;
+    border-right: 0 #ff0099 solid;
+    border-bottom: 0 #ff0099 solid;
+    border-left: 0px #ff0099 solid;
+    height: 380px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    text-align: right;
+    word-wrap: break-word;
+    overflow: auto;
+    box-shadow: 2px 2px 5px 1px #212121;
+}
+
+.nhap{
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+    border-top: 6px #ff0099 solid;
+    border-right: 20px #ff0099 solid;
+    border-bottom: 6px #ff0099 solid;
+    border-left: 20px #ff0099 solid;
+    font-size:30px;
+    padding:0px;
+    width: 89%;
+    box-shadow: 2px 2px 5px 1px #212121;
+}
+.nhap:focus{
+    background: rgba(255,255,255,0.25);
+    border-radius: 0;
+    color: #0099ff;
+    width: 89%;
+}
+
+input::-webkit-placeholder { /* Chrome/Opera/Safari */
+  color: #e57373;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+  color: #e57373;
+}
+input:-ms-placeholder { /* IE 10+ */
+  color: #e57373;
+}
+input:-moz-placeholder { /* Firefox 18- */
+  color: #e57373;
+}
+input::placeholder{color:#e57373;}
+
+.nut{
+    display:none;
+}
+</style><script>window.onload = function(){
+        var app = angular.module('app', ['firebase']);
+        app.controller('chatCtrl', ['$scope', '$firebase', function($scope, $firebase) {
+        var name = 'Sơn';
+        $scope.name = name;
+        $scope.chatMessage = "";
+        var ref = new Firebase("https://chatbox-509d2.firebaseio.com");
+        var sync = $firebase(ref);
+        $scope.chatMessages = sync.$asArray();
+        $scope.sendChat = function() {
+            var chatMessage = {
+                name: name,
+                message: $scope.chatMessage
+            };
+            $scope.chatMessages.$add(chatMessage);
+            $scope.chatMessage = "";
+        }
+        $scope.clear = function() {
+            for(var i = 0; i < $scope.chatMessages.length; i++) {
+                $scope.chatMessages.$remove($scope.chatMessages[i]);
+            }
+        }
+    }]);
+}
+
+</script></head>
+
+<body ng-app="app">
+
+    <div class="onl"></div>
+    <h1>Boss</h1>
+    <div class="st">
+        <h2>—</h2>
+    </div>
+
+    <div class="chat" ng-controller="chatCtrl">
+       <div id="chatBox">
+            <div ng-repeat="chatMessage in chatMessages | limitTo:9000000000">
+                <span class="ten">{{chatMessage.name}}  </span> :  <span> {{chatMessage.message}}</span>
+            </div>
+        </div>
+        <form>
+            <input type="text" ng-model="chatMessage" class="nhap" placeholder="Soạn tin nhắn"/>
+            <button type="submit" ng-click="sendChat()" class="nut">Send</button>
+        </form>
+    </div>
+</body>
+</html>

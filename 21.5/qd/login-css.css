@@ -1,0 +1,80 @@
+html{cursor: url('../img/heart.png'), auto; /*Định dạng chuột*/}
+
+body{
+    background: #fff;
+	background: url('../img/bg.png') no-repeat center center fixed;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+	z-index:-100;
+}
+.sign{
+	position: relative;
+	padding: 0 0 1em 0;
+	width: 100%;
+	text-align: center;
+	border-radius: 5px;
+	z-index: 10;
+	margin: 100px auto;
+}
+
+.sign input{
+   width: 12em;
+   height: 45px;
+   display: block;
+   margin: 25px auto;
+   background: #fff;
+   border: solid 1px #0099ff;
+   border-radius: 5px;
+   padding: 5px;
+   color: #0cff00;
+   font-family: 'Lobster Two', cursive;
+   font-weight: 500;
+   font-size: 35px;
+   outline: none;
+   appearance: none;
+}
+.sign ::-webkit-input-placeholder { 
+color: #0099ff;
+} 
+.sign input:focus{
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom: solid 3px red;
+   background: rgba(255,255,255,0.25);
+   border-radius: 0;
+   color: #0099ff;
+   font-size: 18px;
+   width: 25em;
+}
+
+.sign #login{
+	width: 5em;
+	height: auto;
+	display: block;
+	margin: 20px auto;
+	color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 18px;
+	font-family: 'Lobster Two', cursive;
+	font-size: 34px;
+	font-weight: 500;
+	outline: none;
+	appearance: none;
+	background: -webkit-linear-gradient(left,#7283f9, #f469f2);
+				-moz-linear-gradient(left,#7283f9, #f469f2);
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sign #login:active{
+    width: 3em;
+    height: 50px;
+    border-radius: 10px	50px 100px;
+}
+button:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+}

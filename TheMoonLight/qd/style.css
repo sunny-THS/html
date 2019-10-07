@@ -1,0 +1,196 @@
+body {
+  background: #16222A;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3A6073, #16222A);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3A6073, #16222A);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.moon {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  transform: translate(-8%, -10%);
+  padding: 80px;
+  background: rgb(233, 232, 232);
+  border-radius: 50%;
+  box-shadow: 0 0 60px rgb(90, 227, 251);
+  border: none;
+}
+
+.moon::before {
+  content: '';
+  position: absolute;
+  box-shadow: 0 0 20px rgb(217, 217, 217),
+    0 0 40px rgb(235, 235, 235),
+    0 0 50px rgb(244, 230, 230);
+  padding: 80px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+
+.cloud {
+  position: absolute;
+  right: 2%;
+  animation: cloud 2s linear infinite;
+}
+
+@keyframes cloud {
+  0% {
+    top: 9%;
+  }
+
+  50% {
+    top: 7.5%;
+  }
+
+  100% {
+    top: 9%;
+  }
+}
+
+.cloud img {
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+  width: 250px;
+  height: 200px;
+}
+
+.star-star {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding: 3px;
+  background: rgb(255, 255, 255);
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgb(255, 255, 255),
+    0 0 30px rgb(196, 252, 248);
+}
+
+.land {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.land .grass {
+  height: 150px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.land .la {
+  position: absolute;
+  height: 70px;
+  width: 100vw;
+  background: #000;
+  bottom: 0;
+}
+
+.land svg {
+  position: absolute;
+  height: 250px;
+  width: 100px;
+  top: -130px;
+  left: 50%;
+}
+
+.land .tree {
+  position: absolute;
+  height: 700px;
+  width: 1000px;
+  top: -480px;
+  left: -200px;
+}
+.music {
+  position: absolute;
+  font-family: 'Pacifico', cursive;
+  left: 20px;
+  font-size: 40px;
+  color: #000;
+  opacity: .5;
+}
+.music span {
+  margin: 0;
+  padding: 0;
+  animation: aa 4s linear infinite;
+}
+@keyframes aa {
+  0%, 100% {
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 5px #00b3ff,
+                0 0 10px #00b3ff,
+                0 0 20px #00b3ff,
+                0 0 40px #00b3ff,
+                0 0 60px #00b3ff,
+                0 0 80px #00b3ff,
+                0 0 100px #00b3ff;
+  }
+  5%, 95% {
+    color: #111;
+    filter: blur(0);
+  }
+}
+
+.music span:nth-child(1) {
+  animation-delay: 0s;
+}
+.music span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.music span:nth-child(3) {
+  animation-delay: .5s;
+}
+.music span:nth-child(4) {
+  animation-delay: .75s;
+}
+.music span:nth-child(5) {
+  margin: 0 15px;
+}
+.music span:nth-child(6) {
+  animation-delay: 1s;
+}
+.music span:nth-child(7) {
+  animation-delay: 1.25s;
+}
+.music span:nth-child(8) {
+  animation-delay: 1.5s;
+}
+.music span:nth-child(9) {
+  animation-delay: 1.75s;
+}
+.music span:nth-child(10) {
+  animation-delay: 2s;
+}
+.music span:nth-child(11) {
+  animation-delay: 2.25s;
+}
+.music span:nth-child(12) {
+  animation-delay: 2.5s;
+}
+.music span:nth-child(13) {
+  animation-delay: 2.75s;
+}
+.music span:nth-child(14) {
+  animation-delay: 3s;
+}
+.music span:nth-child(15) {
+  animation-delay: 3.25s;
+}
+.music span:nth-child(16) {
+  animation-delay: 3.5s;
+}
+.music span:nth-child(17) {
+  animation-delay: 3.75s;
+}
+
+hr {
+  margin: 0;
+}

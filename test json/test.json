@@ -1,0 +1,13 @@
+[{
+    "name": "Aragorn",
+    "race": "Human"
+  },
+  {
+    "name": "Gimli",
+    "race": "Dwarf"
+  },
+  {
+    "name": "Son",
+    "age": 18
+  }
+]

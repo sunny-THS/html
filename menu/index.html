@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tạo hiệu ứng CSS3 dropdown menu cực pro</title>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+	<link rel="icon" type="image/png" href="http://imgur.com/CILKGax.png">
+	<script type="text/javascript">
+			alert("Hello boss❤");
+			alert("Chúc em một ngày vui vẻ❤❤❤");
+			$(document).ready(function(){
+				var textarea = $("textarea")[0];
+				var statements = "Đây là kỉ niệm giữa anh và em\nEm là chính là người anh yêu nhất❤️❤️\nEm đã mang đến cho anh cảm thấy hạnh phúc\nnhững cảm xúc vui, buồn mà em tạo ra chắc hẳn anh sẽ nhớ mãi trong lòng❤️\nAnh làm cái web này chỉ muốn tụi mình sẽ lưu mọi kỉ niệm vui buồn của mình vào đây❤️\nCuối cùng,\nAnh chỉ muốn nói lim❤️ = +∞\n    I ️❤️ You! ";
+				var counter = 0;
+
+				setInterval(function(){
+					textarea.innerHTML += 
+					statements.charAt( counter );
+					counter++;
+				}, 80)
+				var x = setInterval(function(){   
+					$("textarea").scrollTop($("textarea")[0].scrollHeight)
+					},0);
+					setTimeout(function(){clearInterval(x)},70000)
+			})
+	</script>
+</head>
+<body>
+	<div class="container" id="main" role="main">
+		<ul class="menu">
+			<li><a href="https://www.facebook.com/profile.php?id=100007197888353">Home</a></li>
+			<li><a href="#s1">Gift</a>
+				<ul class="submenu">
+					<li><a href="index2.html">Love</a></li>
+					<li><a href="ontap.html">Ôn tập</a></li>
+				</ul>
+			</li>
+			<li class="active"><a href="#s2">holidays</a>
+				<ul class="submenu">
+					<li><a href="1.html">năm mới</a></li>
+					<li><a href="#">21-05</a></li>
+				</ul>
+			</li>
+            <li><a href="tkb.html">TKB</a>
+				<ul class="submenu">
+                </ul>
+			</li>         
+		</ul>
+	</div>
+	<div class="khung1">
+		
+		<h1>❤️Kỉ niệm❤️</h1>
+			<div class="khung">
+				<img class="hinh" src="img/25975713_2024129661170277_1600586517_n.jpg" height="100px" width="80px">
+				<img class="hinh" src="img/26056569_2017955358447088_368877125_n.jpg" height="100px" width="80px">
+				<img class="hinh" src="img/qua1.jpg" height="100px" width="120px">
+				<img class="hinh" src="img/qua2.jpg" height="100px" width="120px">
+				<img class="hinh" src="img/baby.jpg" height="100px" width="120px">
+				<img class="hinh" src="img/hoahong.jpg" height="100px" width="120px">
+				<video class="clip" height="150px" width="25%" autoplay loop>
+					<source src="img/tinhyeu.mp4" type="video/mp4">
+					<source src="img/tinhyeu.mp4" type="video/mp4">
+					<source src="img/tinhyeu.webm" type="video/webm">
+					<source src="img/tinhyeu.ogv" type="video/ogv">
+				</video>
+			</div>
+			<p>
+				<textarea></textarea>
+			</p>
+	</div>
+</body>
+</html>
+<style>
+.khung1{
+	position:relative;
+}
+h1{
+	position: relative;
+	margin-top: 50px;
+	margin-bottom: 0;
+	font-family: 'Dancing Script', cursive;
+	color: #fff;
+	font-size: 100px;
+	font-style:italic;
+	text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+	z-index: 1;
+}
+p{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.khung{
+	position: relative;
+	margin: 0 10%;
+	font-size: 45px;
+	text-align: left;
+}
+.khung .hinh:hover{
+	height: 500px;
+	width: 480px;
+}
+.khung .clip:hover{
+	height: 500px;
+	width: 100%;
+}
+textarea{
+	height: 650px;
+	width: 100%;
+	font-family: 'Dancing Script', cursive;
+	background:pink;
+	color: #fff;
+	font-size: 50px;
+	margin: 25px 0;
+    display: block;
+    resize: none;
+	font-weight: bolder;
+	border: none;
+}
+html, body {
+	margin: 0;
+    padding: 0;
+	min-height: 100%;
+	min-width: 100%;
+	background:pink;
+}
+body{
+	text-align:center;
+	position: relative;
+}
+.container {
+	width: 100%;
+	position: fixed;
+	left:auto;
+	z-index:1000;
+	top:0;
+}
+
+/* general styles */
+.menu, .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu {
+    height: 58px;
+}
+.menu li {
+    background: -moz-linear-gradient(#292929, #252525);
+    background: -ms-linear-gradient(#292929, #252525);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #292929), color-stop(100%, #252525));
+    background: -webkit-linear-gradient(#292929, #252525);
+    background: -o-linear-gradient(#292929, #252525);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#252525');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#252525')";
+    background: linear-gradient(#292929, #252525);
+
+    border-bottom: 2px solid #181818;
+    border-top: 2px solid #303030;
+    min-width: 160px;
+}
+.menu > li {
+    display: block;
+    float: left;
+    position: relative;
+}
+.menu > li:first-child {
+    border-radius: 5px 0 0;
+}
+.menu a {
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    color: #808080;
+    display: block;
+    font-family: 'Lucida Console';
+    font-size: 18px;
+    line-height: 54px;
+    padding: 0 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* onhover styles */
+.menu li:hover {
+    background-color: #1c1c1c;
+    background: -moz-linear-gradient(#1c1c1c, #1b1b1b);
+    background: -ms-linear-gradient(#1c1c1c, #1b1b1b);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1c1c1c), color-stop(100%, #1b1b1b));
+    background: -webkit-linear-gradient(#1c1c1c, #1b1b1b);
+    background: -o-linear-gradient(#1c1c1c, #1b1b1b);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#1b1b1b');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#1b1b1b')";
+    background: linear-gradient(#1c1c1c, #1b1b1b);
+
+    border-bottom: 2px solid #222222;
+    border-top: 2px solid #1B1B1B;
+}
+.menu li:hover > a {
+    border-radius: 5px 0 0 0;
+    border-left: 3px solid #C4302B;
+    color: #C4302B;
+}
+
+/* submenu styles */
+.submenu {
+    left: 0;
+    max-height: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 0;
+
+    -webkit-perspective: 400px;
+    -moz-perspective: 400px;
+    -ms-perspective: 400px;
+    -o-perspective: 400px;
+    perspective: 400px;
+}
+.submenu li {
+    opacity: 0;
+
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+
+    -webkit-transition: opacity .4s, -webkit-transform .5s;
+    -moz-transition: opacity .4s, -moz-transform .5s;
+    -ms-transition: opacity .4s, -ms-transform .5s;
+    -o-transition: opacity .4s, -o-transform .5s;
+    transition: opacity .4s, transform .5s;
+}
+.menu .submenu li:hover a {
+    border-left: 3px solid #454545;
+    border-radius: 0;
+    color: #ffffff;
+}
+.menu > li:hover .submenu, .menu > li:focus .submenu {
+    max-height: 2000px;
+    z-index: 10;
+}
+.menu > li:hover .submenu li, .menu > li:focus .submenu li {
+    opacity: 1;
+
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+/* CSS3 delays for transition effects */
+.menu li:hover .submenu li:nth-child(1) {
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.menu li:hover .submenu li:nth-child(2) {
+    -webkit-transition-delay: 50ms;
+    -moz-transition-delay: 50ms;
+    -ms-transition-delay: 50ms;
+    -o-transition-delay: 50ms;
+    transition-delay: 50ms;
+}
+.menu li:hover .submenu li:nth-child(3) {
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    -ms-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+.menu li:hover .submenu li:nth-child(4) {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    transition-delay: 150ms;
+}
+.menu li:hover .submenu li:nth-child(5) {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+.menu li:hover .submenu li:nth-child(6) {
+    -webkit-transition-delay: 250ms;
+    -moz-transition-delay: 250ms;
+    -ms-transition-delay: 250ms;
+    -o-transition-delay: 250ms;
+    transition-delay: 250ms;
+}
+.menu li:hover .submenu li:nth-child(7) {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+.menu li:hover .submenu li:nth-child(8) {
+    -webkit-transition-delay: 350ms;
+    -moz-transition-delay: 350ms;
+    -ms-transition-delay: 350ms;
+    -o-transition-delay: 350ms;
+    transition-delay: 350ms;
+}
+
+.submenu li:nth-child(1) {
+    -webkit-transition-delay: 350ms;
+    -moz-transition-delay: 350ms;
+    -ms-transition-delay: 350ms;
+    -o-transition-delay: 350ms;
+    transition-delay: 350ms;
+}
+.submenu li:nth-child(2) {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+}
+.submenu li:nth-child(3) {
+    -webkit-transition-delay: 250ms;
+    -moz-transition-delay: 250ms;
+    -ms-transition-delay: 250ms;
+    -o-transition-delay: 250ms;
+    transition-delay: 250ms;
+}
+.submenu li:nth-child(4) {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+}
+.submenu li:nth-child(5) {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    transition-delay: 150ms;
+}
+.submenu li:nth-child(6) {
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    -ms-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    transition-delay: 100ms;
+}
+.submenu li:nth-child(7) {
+    -webkit-transition-delay: 50ms;
+    -moz-transition-delay: 50ms;
+    -ms-transition-delay: 50ms;
+    -o-transition-delay: 50ms;
+    transition-delay: 50ms;
+}
+.submenu li:nth-child(8) {
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+</style>

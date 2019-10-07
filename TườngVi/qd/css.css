@@ -1,0 +1,213 @@
+html {
+    height : 100%;
+    margin : auto;
+    overflow: hidden;
+    display : table;
+}
+
+body {
+    height : 100%;
+    color : green;
+    text-align : center;
+    display : table-cell;
+    vertical-align : middle;
+    background-color : black;
+}
+
+.well {
+    background-color : black;
+    border-radius: 25px;
+    border: 1px solid green;
+}
+
+hr {
+    border : 1px solid green;
+    width: 50%;
+}
+
+.countdown {
+    padding : 15px;
+}
+
+.holiday {
+  font-family: 'Pacifico', cursive;
+  margin: 10px auto;
+  font-size: 50px;
+  color: #000;
+}
+.holiday span {
+  margin: 0;
+  padding: 0;
+  animation: aa 3.25s linear infinite;
+}
+@keyframes aa {
+  0%, 100% {
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 5px #00b3ff,
+                0 0 10px #00b3ff,
+                0 0 20px #00b3ff,
+                0 0 40px #00b3ff,
+                0 0 60px #00b3ff,
+                0 0 80px #00b3ff,
+                0 0 100px #00b3ff;
+  }
+  5%, 95% {
+    color: #111;
+    filter: blur(0);
+  }
+}
+
+.holiday span:nth-child(1) {
+  animation-delay: 0s;
+}
+.holiday span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.holiday span:nth-child(3) {
+  animation-delay: .5s;
+}
+.holiday span:nth-child(4) {
+  animation-delay: .75s;
+}
+.holiday span:nth-child(5) {
+  animation-delay: 1s;
+}
+.holiday span:nth-child(6) {
+  margin: 0 15px;
+}
+.holiday span:nth-child(7) {
+  animation-delay: 1.25s;
+}
+.holiday span:nth-child(8) {
+  animation-delay: 1.5s;
+}
+.holiday span:nth-child(9) {
+  animation-delay: 1.75s;
+}
+.holiday span:nth-child(10) {
+  animation-delay: 2s;
+}
+.holiday span:nth-child(11) {
+  animation-delay: 2.25s;
+}
+.holiday span:nth-child(12) {
+  margin: 0 15px;
+}
+.holiday span:nth-child(13) {
+	animation-delay: 2.5s;
+}
+.holiday span:nth-child(14) {
+	animation-delay: 2.75s;
+}
+.holiday span:nth-child(15) {
+	animation-delay: 3s;
+}
+
+.num {
+    font-size : 15px;
+    font-weight : bold;
+}
+
+.txt {
+    font-size : 10px;
+}
+
+.tim1 {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: #0ff;
+  box-shadow: 10px 10px 0 rgb(255,0,0),
+              -10px 10px 0 rgb(255,0,0),
+              -10px -10px 0 rgb(255,0,0),
+              10px -10px 0 rgb(255,0,0),
+              20px 0 0 rgb(255,0,0),
+              -20px 0 0 rgb(255,0,0),
+              0 20px 0 rgb(255,0,0),
+              0 -20px 0 rgb(255,0,0),
+              30px -10px 0 rgb(255,0,0),
+              -30px -10px 0 rgb(255,0,0),
+              20px -20px 0 rgb(255,0,0),
+              -20px -20px 0 rgb(255,0,0),
+              40px -20px 0 rgb(255,0,0),
+              -40px -20px 0 rgb(255,0,0),
+              10px -30px 0 rgb(255,0,0),
+              -10px -30px 0 rgb(255,0,0),
+              30px -30px 0 rgb(255,0,0),
+              -30px -30px 0 rgb(255,0,0),
+              -50px -30px 0 rgb(255,0,0),
+              50px -30px 0 rgb(255,0,0),
+              20px -40px 0 rgb(255,0,0),
+              -20px -40px 0 rgb(255,0,0),
+              40px -40px 0 rgb(255,0,0),
+              -40px -40px 0 rgb(255,0,0);
+}
+.tim2 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -70%) rotate(180deg);
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: #0f0;
+  box-shadow: 10px 10px 0 rgb(255,0,0),
+              -10px 10px 0 rgb(255,0,0),
+              -10px -10px 0 rgb(255,0,0),
+              10px -10px 0 rgb(255,0,0),
+              20px 0 0 rgb(255,0,0),
+              -20px 0 0 rgb(255,0,0),
+              0 20px 0 rgb(255,0,0),
+              0 -20px 0 rgb(255,0,0),
+              30px -10px 0 rgb(255,0,0),
+              -30px -10px 0 rgb(255,0,0),
+              20px -20px 0 rgb(255,0,0),
+              -20px -20px 0 rgb(255,0,0),
+              40px -20px 0 rgb(255,0,0),
+              -40px -20px 0 rgb(255,0,0),
+              10px -30px 0 rgb(255,0,0),
+              -10px -30px 0 rgb(255,0,0),
+              30px -30px 0 rgb(255,0,0),
+              -30px -30px 0 rgb(255,0,0),
+              -50px -30px 0 rgb(255,0,0),
+              50px -30px 0 rgb(255,0,0),
+              20px -40px 0 rgb(255,0,0),
+              -20px -40px 0 rgb(255,0,0),
+              40px -40px 0 rgb(255,0,0),
+              -40px -40px 0 rgb(255,0,0);
+}
+
+.hello {
+  position: absolute;
+  font-size: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  background: rgba(255,0,14,.69);
+  padding: 5px;
+  z-index: 10;
+  display: block;
+  cursor: pointer;
+}
+/*----------------responsive-------------------*/
+@media only screen and (min-width: 570px) and (max-width: 720px) {
+  .holiday {
+    font-size: 300%;
+  }
+}
+@media only screen and (min-width: 380px) and (max-width: 570px) {
+  .holiday {
+    font-size: 200%;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .holiday {
+    font-size: 180%;
+  }
+}

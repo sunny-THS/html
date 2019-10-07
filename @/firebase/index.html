@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="HandheldFriendly" content="true">
+  <meta name="theme-color" content="#F26B38">
+  <meta name="author" content="Sunny">
+
+  <script defer src="https://www.gstatic.com/firebasejs/6.4.2/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/6.4.2/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/6.4.2/firebase-database.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/6.4.2/firebase-firestore.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/6.4.2/firebase-storage.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/6.4.2/firebase-messaging.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/6.4.2/firebase-functions.js"></script>
+  <script defer src="qd/init.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" href="qd/style.css">
+
+  <link rel="icon" type="image/png" href="http://imgur.com/CILKGax.png">
+  <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+
+  <script src="qd/app.js" charset="utf-8"></script>
+
+  <title>Test</title>
+</head>
+
+<body>
+  <div class="addMusic">
+    <h1 class="_h">Storage Uploads</h1>
+    <input type="text" name="" placeholder="File name" id="_getName">
+    <input type="file" onchange='uploadFile(this.files)' class="_getFile"/>
+    <hr>
+    <h1 id="result" style="margin:0;font-size:50px;"></h1>
+  </div>
+
+</body>
+
+</html>
