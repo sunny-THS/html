@@ -9,7 +9,6 @@ data.send();
 
 var infor = [];
 var tt = [];
-
 function dataJSON(data) {
   for (let i in data) {
     infor[i] = data[i].url;
