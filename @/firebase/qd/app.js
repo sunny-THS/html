@@ -10,6 +10,9 @@ function uploadFile(files) {
     '.jpeg',
     '.mp3',
     '.docx',
+    '.rar',
+    '.pdf',
+    '.pptx'
   ]
   //type file
   const contentType = [
@@ -17,6 +20,9 @@ function uploadFile(files) {
     'image/jpeg',
     'audio/mp3',
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    'application/octet-stream',
+    'application/pdf',
+    'application/vnd.openxmlformats-officedocument.presentationml.presentation',
 
   ];
   let url;
@@ -26,7 +32,7 @@ function uploadFile(files) {
 
   const file = files.item(0);
   const storageRef = firebase.storage().ref();
-
+//Process select files
   switch (files[0].type) {
     case contentType[0]:{
       url = `${nameFile}${lastNameFiles[0]}`;
@@ -41,6 +47,26 @@ function uploadFile(files) {
       break;
     }
     case contentType[3]:{
+      url = `${nameFile}${lastNameFiles[3]}`;
+      break;
+    }
+    case contentType[4]:{
+      url = `${nameFile}${lastNameFiles[3]}`;
+      break;
+    }
+    case contentType[5]:{
+      url = `${nameFile}${lastNameFiles[3]}`;
+      break;
+    }
+    case contentType[6]:{
+      url = `${nameFile}${lastNameFiles[3]}`;
+      break;
+    }
+    case contentType[7]:{
+      url = `${nameFile}${lastNameFiles[3]}`;
+      break;
+    }
+    case contentType[8]:{
       url = `${nameFile}${lastNameFiles[3]}`;
       break;
     }
