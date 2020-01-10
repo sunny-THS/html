@@ -40,7 +40,10 @@ var time = () => {
       let seconds = Math.floor(t / 1000) - days * 86400 - hours * 3600 - minutes * 60;
       seconds = seconds > 9 ? seconds : "0" + seconds;
       
-      document.getElementById('time').innerTEXT
+      let time_NY=document.getElementById('_time');
+      if(days>0){
+         time_NY.innerHTML= `<h1>${days}</h1>`;
+      }
   } else if (t > -86400000) {
       location.href = "troll.html";
   } else
