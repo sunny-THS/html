@@ -39,6 +39,8 @@ var time = () => {
       //tinh giay
       let seconds = Math.floor(t / 1000) - days * 86400 - hours * 3600 - minutes * 60;
       seconds = seconds > 9 ? seconds : "0" + seconds;
+      
+      document.getElementById('time').innerTEXT
   } else if (t > -86400000) {
       location.href = "troll.html";
   } else
