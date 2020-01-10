@@ -1,3 +1,5 @@
 <?php
-  echo "Hello wordl!";
+  $host = $_SERVER['HTTP_HOST'];
+  $img_path = $host.'/images';
+  require 'file';
 ?>

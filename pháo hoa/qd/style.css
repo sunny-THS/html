@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+body {
+	background: #000;
+	margin: 0;
+}
+canvas {
+	cursor: crosshair;
+	display: block;
+}
+#tHPNG{
+  color: #fff;
+  font-family: 'Courgette', cursive;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  display: none;
+}
