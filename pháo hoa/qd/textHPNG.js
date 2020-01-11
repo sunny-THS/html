@@ -1,10 +1,11 @@
+alert("Khi hết thời gian thì hãy nhấn vào màn hình");
 //setting time
 var year = [];
 year[0] = new Date().getFullYear();
 
 var time = () => {
   let time_NY=document.getElementById('_time');
-  let date = [11, 1, 16, 35];
+  let date = [25, 1, 0, 0];
   let [day, month, hour, min] = date;
 
   let d = new Date(year[0], month-1, day, hour, min, 0, 0);
