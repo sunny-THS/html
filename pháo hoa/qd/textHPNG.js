@@ -4,7 +4,7 @@ year[0] = new Date().getFullYear();
 
 var time = () => {
   let time_NY=document.getElementById('_time');
-  let date = [11, 1, 16, 6];
+  let date = [11, 1, 16, 35];
   let [day, month, hour, min] = date;
 
   let d = new Date(year[0], month-1, day, hour, min, 0, 0);
@@ -50,7 +50,7 @@ var time = () => {
 
       document.getElementById('dark').style.display = 'none';
 
-      window.open('http://facebook.com','_blank');
+      window.open('https://raw.githubusercontent.com/sunny-THS/html/master/ph%C3%A1o%20hoa/text.txt','_blank');
   } else
       year[0]++;
 }
