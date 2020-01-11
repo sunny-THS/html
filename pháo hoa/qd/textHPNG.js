@@ -1,32 +1,18 @@
-function text_HPNG() {
-  this.text= document.getElementById('tHPNG');
-  this.h= ch/2;
-  this.w= cw/2;
-  this.font_size= 100;
-  this.text.style.top= `${this.h}px`;
-  this.text.style.left= `${this.w}px`;
-  this.text.style.fontSize= `${this.font_size}px`;
-}
 //setting time
 var year = [];
 year[0] = new Date().getFullYear();
 
 var time = () => {
-
-  let date = [25, 1, 0, 0];
+  let time_NY=document.getElementById('_time');
+  let date = [11, 1, 14, 31];
   let [day, month, hour, min] = date;
-
-  //this.month = 12; //tháng
-  //this.day = 24; //ngày
-  //this.hour = 7; //giờ
-  //this.min = 30; //phút
 
   let d = new Date(year[0], month-1, day, hour, min, 0, 0);
   var t = d.getTime() - new Date().getTime();
   if (t > 0) {
       //tinh ngay
       let days = Math.floor(t / 86400000);
-      days = days > 99 ? days : days > 9 ? "0" + days : "00" + days;
+      days = days > 9 ? days : "0" + days;
 
       //tinh gio
       let hours = Math.floor(t / 3600000) - days * 24;
@@ -39,13 +25,27 @@ var time = () => {
       //tinh giay
       let seconds = Math.floor(t / 1000) - days * 86400 - hours * 3600 - minutes * 60;
       seconds = seconds > 9 ? seconds : "0" + seconds;
-      
-      let time_NY=document.getElementById('_time');
+
       if(days>0){
-         time_NY.innerHTML= `<h1>${days}</h1>`;
+         time_NY.innerHTML= `<h1>${days} ngày<br/>${hours} : ${minutes} : ${seconds}</h1>`;
+      }else{
+        time_NY.innerHTML= `<h1>${hours} : ${minutes} : ${seconds}</h1>`;
       }
   } else if (t > -86400000) {
-      location.href = "troll.html";
+      time_NY.style.display = 'none';
+      document.getElementById('tHPNG').style.display = 'block';
+
+      let a = document.getElementById('tHPNG');
+      a.classList.add('holiday');
+
+      var promise = document.getElementById('pl').play();
+      if (promise !== undefined) {
+        promise.then(_=>{
+          document.getElementById('pl').autoplay= true;
+        }).catch(error=>{
+          document.getElementById('pl').autoplay= true;
+        })
+      }
   } else
       year[0]++;
 }

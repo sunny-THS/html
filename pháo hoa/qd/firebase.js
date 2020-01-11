@@ -152,7 +152,7 @@ function Particle(x, y) {
   this.brightness = random(50, 80);
   this.alpha = 1;
   // set how fast the particle fades out
-  this.decay = random(0.003, 0.01);
+  this.decay = random(0.003, 0.05);
 }
 
 // update particle
@@ -268,5 +268,23 @@ canvas.addEventListener('mouseup', function(e) {
   mousedown = false;
 });
 
+function text_HPNG() {
+  this.text= document.getElementById('tHPNG');
+  this.h= ch/2;
+  this.w= cw/2;
+  this.font_size= 70;
+  this.text.style.top= `${this.h}px`;
+  this.text.style.left= `${this.w}px`;
+  this.text.style.fontSize= `${this.font_size}px`;
+}
+
+function screenWidth() {
+  if (cw<ch && cw<768) {
+
+  }
+}
 // once the window loads, we are ready for some fireworks!
-window.onload = loop;
+window.onload = ()=>{
+    new loop;
+    new text_HPNG;
+}
