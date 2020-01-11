@@ -4,7 +4,7 @@ year[0] = new Date().getFullYear();
 
 var time = () => {
   let time_NY=document.getElementById('_time');
-  let date = [11, 1, 14, 31];
+  let date = [11, 1, 16, 6];
   let [day, month, hour, min] = date;
 
   let d = new Date(year[0], month-1, day, hour, min, 0, 0);
@@ -27,11 +27,12 @@ var time = () => {
       seconds = seconds > 9 ? seconds : "0" + seconds;
 
       if(days>0){
-         time_NY.innerHTML= `<h1>${days} ngày<br/>${hours} : ${minutes} : ${seconds}</h1>`;
+         time_NY.innerHTML= `<h1>Hãy chờ đợi trong<br/>${days} ngày<br/>${hours} : ${minutes} : ${seconds}</h1>`;
       }else{
-        time_NY.innerHTML= `<h1>${hours} : ${minutes} : ${seconds}</h1>`;
+        time_NY.innerHTML= `<h1>Hãy chờ đợi trong<br/>${hours} : ${minutes} : ${seconds}</h1>`;
       }
   } else if (t > -86400000) {
+      new text_HPNG;
       time_NY.style.display = 'none';
       document.getElementById('tHPNG').style.display = 'block';
 
@@ -46,6 +47,10 @@ var time = () => {
           document.getElementById('pl').autoplay= true;
         })
       }
+
+      document.getElementById('dark').style.display = 'none';
+
+      window.open('http://facebook.com','_blank');
   } else
       year[0]++;
 }

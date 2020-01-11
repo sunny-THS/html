@@ -272,19 +272,19 @@ function text_HPNG() {
   this.text= document.getElementById('tHPNG');
   this.h= ch/2;
   this.w= cw/2;
-  this.font_size= 70;
+  this.font_size= 300;
   this.text.style.top= `${this.h}px`;
   this.text.style.left= `${this.w}px`;
-  this.text.style.fontSize= `${this.font_size}px`;
+  this.text.style.fontSize= `${this.font_size}%`;
 }
 
-function screenWidth() {
-  if (cw<ch && cw<768) {
-
-  }
+function fullScreenBlack() {
+  this.dark = document.getElementById('dark');
+  this.dark.style.height = `${ch}px`;
+  this.dark.style.width = `${cw}px`;
 }
 // once the window loads, we are ready for some fireworks!
 window.onload = ()=>{
     new loop;
-    new text_HPNG;
+    new fullScreenBlack;
 }
