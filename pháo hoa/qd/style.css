@@ -122,7 +122,10 @@ canvas {
 	top: -60px;
 	z-index: 1;
 	transition: all 3s ease-out;
-	animation: heart 4s linear infinite;
+	animation-name: heart;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
 }
 
 #dark li::before{
@@ -228,4 +231,10 @@ canvas {
 		transform: rotate(360deg);
 		opacity: 0;
 	}
+}
+
+@media only screen and (max-width: 570px) {
+  #dark li{
+    animation-duration: 8s;
+  }
 }
