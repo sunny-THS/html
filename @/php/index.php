@@ -1,5 +1,4 @@
 <?php
-  $host = $_SERVER['HTTP_HOST'];
-  $img_path = $host.'/images';
-  require 'file';
+  define('h', '45498');
+  echo h;
 ?>
