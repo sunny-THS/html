@@ -107,6 +107,11 @@ canvas {
 	text-align: center;
 	z-index: 3;
 }
+#_time h1 strong {
+	font-family: 'Courgette', cursive;
+ 	font-size: 80px;
+	text-shadow: 2px 3px rgba(255, 0, 0, 0.65);
+}
 #dark {
 	background: #000;
 	z-index: 2;

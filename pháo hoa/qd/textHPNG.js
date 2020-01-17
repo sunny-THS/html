@@ -1,7 +1,8 @@
-//alert("Khi hết thời gian thì hãy nhấn vào màn hình");
+alert("Khi hết thời gian thì hãy nhấn vào màn hình");
 //setting time
 var year = [];
 year[0] = new Date().getFullYear();
+
 
 var time = () => {
   let time_NY=document.getElementById('_time');
@@ -28,9 +29,15 @@ var time = () => {
       seconds = seconds > 9 ? seconds : "0" + seconds;
 
       if(days>0){
-         time_NY.innerHTML= `<h1>New Year Countdown<br/>${days} ngày<br/>${hours} : ${minutes} : ${seconds}</h1>`;
+         time_NY.innerHTML= `<h1><strong>New Year Countdown</strong><br/>
+                                  ${days} | ${hours} | ${minutes} | ${seconds}<br/>
+                                  Ngày giờ phút giây
+                              </h1>`;
       }else{
-        time_NY.innerHTML= `<h1>New Year Countdown<br/>${hours} : ${minutes} : ${seconds}</h1>`;
+        time_NY.innerHTML= `<h1><strong>New Year Countdown</strong><br/>
+                                 ${hours} | ${minutes} | ${seconds}<br/>
+                                 giờ phút giây
+                             </h1>`;
       }
   } else if (t > -86400000) {
       new text_HPNG;
