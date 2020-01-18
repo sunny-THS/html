@@ -1,12 +1,3 @@
-		
-
-		http://cpanel.byethost7.com/
-			FTP host
-
-	host name 	:  	ftp.byethost7.com
-	username  	:	b7_21592083
-	password	:	tuhueson522001
-
 
 
 		http://cpanel.byethost10.com
