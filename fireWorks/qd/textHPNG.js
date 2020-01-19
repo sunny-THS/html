@@ -58,7 +58,7 @@ var time = () => {
 
       document.getElementById('dark').style.display = 'none';
 
-      window.open('https://raw.githubusercontent.com/sunny-THS/html/master/ph%C3%A1o%20hoa/text.txt','_blank');
+      window.open('https://raw.githubusercontent.com/sunny-THS/html/master/fireWorks/text.txt','_blank');
   } else
       year[0]++;
 }
