@@ -2,12 +2,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: rgba(0, 240, 255, .35);
+  background: #000;
   overflow: hidden;
 }
-
+/*rgba(0, 240, 255, .35)*/
 canvas {
-  display: none;
+  display: block;
 }
 
 .loading div
@@ -69,28 +69,80 @@ canvas {
 
 /*==== page 2 === */
 .page2 {
-  display: block;
+  display: none;
 }
-.page2 li {
+.page2 .card li {
+  position: absolute;
   list-style: none;
+  background: url("http://img-webb.html-5.me/greenluckyfour.png");
+  background-size: cover;
+  height: 80px;
+  width: 80px;
 }
-.page2 li:nth-child(1) {
-  height: 4px;
-  width: 4px;
-  border-radius: 50%;
-  background: #f00;
-  
+.page2 .card li:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  transform: rotate(-90deg);
 }
-.page2 .cake{
+.page2 .card li:nth-child(2) {
+  top: 0;
+  left: 0;
+}
+.page2 .card li:nth-child(3) {
+  top: 50%;
+  left: 3%;
+  transform: rotate(65deg);
+}
+.page2 .card li:nth-child(4) {
+  top: 75%;
+  left: 12%;
+  transform: rotate(-150deg);
+}
+.page2 .card li:nth-child(5) {
+  top: 0;
+  right: 0;
+  transform: rotateY(180deg);
+}
+.page2 .card li:nth-child(6) {
+  top: 20%;
+  right: 10%;
+  transform: rotate(90deg);
+}
+.page2 .card li:nth-child(7) {
+  top: 50%;
+  right: 3%;
+  transform: rotate(-65deg);
+}
+.page2 .card li:nth-child(8) {
+  top: 75%;
+  right: 12%;
+  transform: rotate(150deg);
+}
+.page2 .card{
 	position: absolute;
-	width: 70%;
+  border: 2px solid #f00;
+	width: 80%;
 	height: 600px;
   left: 50%;
   top: 50%;
+  background-color: #fff;
   transform: translateX(-50%) translateY(-50%);
+  box-shadow: 4px 6px 5px rgb(65, 65, 65);
 	display: block;
 }
-.page2 .cake .plate {
+.page2 .card img {
+  opacity: .4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1000px;
+  z-index: -1;
+}
+.page2 .card .cake {
+  display: block;
+}
+.page2 .card .cake .plate {
 	width: 350px;
 	height: 250px;
 	position: absolute;
@@ -105,7 +157,7 @@ canvas {
 							0 12px 0 #b3b3b3,
               10px 18px 5px rgb(97, 97, 97);
 }
-.page2 .cake .layer {
+.page2 .card .cake .layer {
 	position: absolute;
 	display: block;
 	width: 330px;
@@ -130,16 +182,16 @@ canvas {
 							0 28px 0px #291d09,
 							0 30px 0px #281c09;
 }
-.page2 .cake .layer-top {
+.page2 .card .cake .layer-top {
 	top: 170px;
 }
-.page2 .cake .layer-middle {
+.page2 .card .cake .layer-middle {
 	top: 200px;
 }
-.page2 .cake .layer-bottom {
+.page2 .card .cake .layer-bottom {
 	top: 230px;
 }
-.page2 .cake .icing {
+.page2 .card .cake .icing {
 	position: absolute;
 	top: 175px;
 	left: 50%;
@@ -149,7 +201,7 @@ canvas {
 	height: 210px;
 	border-radius: 50%;
 }
-.page2 .cake .icing:before {
+.page2 .card .cake .icing:before {
 	content: "Happy birthday to you, Vy💓!";
 	position: absolute;
 	width: 75%;
@@ -164,7 +216,17 @@ canvas {
   text-shadow: 2px 3px 2px rgb(89, 89, 89);
 	z-index: 1;
 }
-.page2 .cake .candle {
+.page2 .card .cake .icing::after {
+  content: '';
+  position: absolute;
+  width: 290px;
+  height: 190px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 10px dashed #553c13;
+  z-index: 1;
+}
+.page2 .card .cake .candle {
 	position: absolute;
 	background-color: #7b020b;
 	width: 16px;
@@ -175,7 +237,7 @@ canvas {
 	transform: translateX(-50%);
 	box-shadow: 5px -3px 10px #444;
 }
-.page2 .cake .candle:before {
+.page2 .card .cake .candle:before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -185,7 +247,7 @@ canvas {
 	border-radius: 50%;
 	background-color: #ad030f;
 }
-.page2 .cake .candle::after {
+.page2 .card .cake .candle::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -199,16 +261,19 @@ canvas {
               4px 10px 0 rgb(66,252,0);
   background: rgb(255,0,0);
 }
-.page2 .cake .blink{
+.page2 .card .cake .candle:hover .flame {
+	opacity: 0;
+	transition: all 1s ease-out;
+}
+.page2 .card .cake .blink{
 		position: absolute;
 		background: #333;
 		width: 2px;
 		height: 8px;
 		top: -2px;
 		left: 50%;
-
 }
-.page2 .cake .flame {
+.page2 .card .cake .flame {
 	position: absolute;
 	background-color: orange;
 	width: 15px;
@@ -226,10 +291,6 @@ canvas {
 							0 0 80px rgba(255, 165, 0, 0.5);
 	transform-origin: 50% 90%;
 	animation: flicker 0.9s ease-in-out alternate infinite;
-}
-.page2 .cake .candle:hover .flame {
-	opacity: 0;
-	transition: all 1s ease-out;
 }
 @keyframes flicker {
 	0% {

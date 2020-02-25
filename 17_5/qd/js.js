@@ -347,5 +347,5 @@ $(document).ready(function(){
 	drawName(message, letterColors);
 	bounceBubbles();
 
-	setInterval(loading,100);
+	//setInterval(loading,100);
 });
