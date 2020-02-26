@@ -5,6 +5,7 @@ function loading(){
         load++;
         if(load == 101){
             $('canvas').css({'display':'block'});
+            $('.nextPage').css({'display':'block'});
             $('.loading').css({'display':'none'});
             clearInterval(loading);
         }

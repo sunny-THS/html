@@ -346,6 +346,22 @@ $(document).ready(function(){
 
 	drawName(message, letterColors);
 	bounceBubbles();
+// clixk nextPahe button
+	$('.nextPage').click(()=>{
+		$('.nextPage').css({'display':'none'});
+		$('canvas').css({'display':'none'});
+		$('body').css({'background':'rgba(0, 240, 255, .35)'});
+		$('.page2').css({'display':'block'});
+		alert('Click on candle');
+	});
+// click candle
+	$('.page2 .card .cake .candle').click(()=>{
+		$('.page2 .card .cake').css({'opacity':0});
+		$('#text').css({'display':'block'});
+		// add json ....
+		wishes();
+	});
 
-	//setInterval(loading,100);
+
+	setInterval(loading,100);
 });
