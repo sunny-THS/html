@@ -11,5 +11,4 @@ function wishes(t) {
     }
     $('#text').scrollTop($('#text')[0].scrollHeight);
   }, 80);
-
 }
