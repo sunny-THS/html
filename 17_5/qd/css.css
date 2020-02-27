@@ -94,8 +94,6 @@ canvas {
 .page2 .card li {
   position: absolute;
   list-style: none;
-  background: url("http://img-webb.html-5.me/greenluckyfour.png");
-  background-size: cover;
   height: 80px;
   width: 80px;
   z-index: -1;
@@ -152,7 +150,7 @@ canvas {
   overflow: hidden;
 	display: block;
 }
-.page2 .card img {
+.page2 .card #heart {
   opacity: .4;
   position: absolute;
   top: 50%;
