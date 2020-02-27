@@ -1,5 +1,5 @@
 function wishes(t) {
-  this.text = text;
+  this.text = t;
   console.log(this.text.length);
   let a = 0;
   let x = setInterval(()=>{
