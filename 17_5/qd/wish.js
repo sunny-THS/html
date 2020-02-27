@@ -1,10 +1,10 @@
 function wishes(t) {
   this.text = t;
-  console.log(this.text.length);
+  console.log(this.text.message.length);
   let a = 0;
   let x = setInterval(()=>{
-    if (a < this.text.length) {
-      document.getElementById('text').innerHTML += this.text.charAt(a++);
+    if (a < this.text.message.length) {
+      document.getElementById('text').innerHTML += this.text.message.charAt(a++);
     }else {
       $('.page2 .card .cake').css({'display':'none'});
       clearInterval(x);

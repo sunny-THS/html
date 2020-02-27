@@ -348,11 +348,6 @@ $(document).ready(function(){
 	bounceBubbles();
 
 
-	// add json ....
-	var data = new XMLHttpRequest();
-
-	data.open('GET', 'https://raw.githubusercontent.com/sunny-THS/html/master/17_5/wishes.json');
-	data.send();
 
 // clixk nextPahe button
 	$('.nextPage').click(()=>{
@@ -366,11 +361,15 @@ $(document).ready(function(){
 	$('.page2 .card .cake .candle').click(()=>{
 		$('.page2 .card .cake').css({'opacity':0});
 		$('#text').css({'display':'block'});
+		// add json ....
+		var data = new XMLHttpRequest();
 		data.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				wishes(JSON.parse(this.responseText));
 			}
 		}
+		data.open('GET', 'https://raw.githubusercontent.com/sunny-THS/html/master/17_5/wishes.json');
+		data.send();
 	});
 
 
