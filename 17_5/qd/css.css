@@ -94,8 +94,6 @@ canvas {
 .page2 .card li {
   position: absolute;
   list-style: none;
-  height: 80px;
-  width: 80px;
   z-index: -1;
 }
 .page2 .card li:nth-child(1) {
