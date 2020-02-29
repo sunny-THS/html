@@ -258,6 +258,7 @@ canvas {
 	left: 50%;
 	transform: translateX(-50%);
 	box-shadow: 5px -3px 10px #444;
+  cursor: pointer;
 }
 .page2 .card .cake .candle:before {
 	content: "";

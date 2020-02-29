@@ -351,11 +351,13 @@ $(document).ready(function(){
 
 // clixk nextPahe button
 	$('.nextPage').click(()=>{
-		console.log(alert('Click on candle')==true);
-		$('.nextPage').css({'display':'none'});
-		$('canvas').css({'display':'none'});
-		$('body').css({'background':'rgba(0, 240, 255, .35)'});
-		$('.page2').css({'display':'block'});
+		if (!alert('Click on candle')) {
+			console.log("%cHello", "color:red;font-size:50px;");
+			$('.nextPage').css({'display':'none'});
+			$('canvas').css({'display':'none'});
+			$('body').css({'background':'rgba(0, 240, 255, .35)'});
+			$('.page2').css({'display':'block'});
+		}
 	});
 // click candle
 	$('.page2 .card .cake .candle').click(()=>{
