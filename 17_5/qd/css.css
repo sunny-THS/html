@@ -353,7 +353,7 @@ canvas {
 	}
 }
 
-#text {
+.page2 .card #text {
   width: 70%;
   height: 75%;
   margin: 40px auto;
@@ -366,6 +366,21 @@ canvas {
   outline: none;
   display: none;
 }
-#text::-webkit-scrollbar {
+.page2 .card #text::-webkit-scrollbar {
   display: none;
+}
+
+.page2 .card #b {
+  position: absolute;
+  cursor: pointer;
+  left: 50%;
+  top: 92%;
+  font-size: 25px;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  border: 2px solid #fff;
+  outline: none;
+  background: rgb(0,200,255);
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }

@@ -352,7 +352,6 @@ $(document).ready(function(){
 // clixk nextPahe button
 	$('.nextPage').click(()=>{
 		if (!alert('Click on candle')) {
-			console.log("%cHello", "color:red;font-size:50px;");
 			$('.nextPage').css({'display':'none'});
 			$('canvas').css({'display':'none'});
 			$('body').css({'background':'rgba(0, 240, 255, .35)'});
