@@ -94,6 +94,8 @@ canvas {
 .page2 .card li {
   position: absolute;
   list-style: none;
+  height: 80px;
+  width: 80px;
   z-index: -1;
 }
 .page2 .card li:nth-child(1) {
@@ -222,7 +224,7 @@ canvas {
 	border-radius: 50%;
 }
 .page2 .card .cake .icing:before {
-	content: "Happy birthday to you, Vy💓!";
+	content: "Happy birthday to you, Vy 💓!";
 	position: absolute;
 	width: 75%;
 	top: 50%;
