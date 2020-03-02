@@ -369,7 +369,6 @@ canvas {
 .page2 .card #text::-webkit-scrollbar {
   display: none;
 }
-
 .page2 .card #b {
   position: absolute;
   cursor: pointer;
@@ -380,7 +379,12 @@ canvas {
   border-radius: 10px;
   border: 2px solid #fff;
   outline: none;
-  background: rgb(0,200,255);
+  background: rgb(0,255,255);
   opacity: 0;
   transition: opacity 1s ease-out;
+}
+.page2 .card #b:active {
+  background: rgb(0, 200, 255);
+  box-shadow: inset 0 0 8px rgb(96, 96, 96);
+  color: #fff;
 }

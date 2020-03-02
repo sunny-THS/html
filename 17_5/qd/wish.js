@@ -10,6 +10,10 @@ function wishes(t) {
       }
     }else {
       $('#b').css({'opacity':1});
+      $('#b').click(function() {
+        console.log("hello");
+        $(this).css({'display':'none'});
+      });
       clearInterval(x);
     }
     $('#text').scrollTop($('#text')[0].scrollHeight);
