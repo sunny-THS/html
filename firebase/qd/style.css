@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+.SetData {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -20%);
+}
+#root {
+  position: absolute;
+  width: 70%;
+  height: 400px;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  align-content: center;
+  text-align: center;
+  overflow: scroll;
+}
+#linkFile {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-size: 50px;
+}
+#linkFile:hover {
+  color: #fff;
+  background: #000;
+}
