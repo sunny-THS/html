@@ -5,10 +5,9 @@ document.addEventListener("DOMContentLoaded", event => {
 });
 window.onload = function() {
   GetJSON();
-  setInterval(()=>{
-    $("#root").scrollTop($('#root')[0].scrollHeight);
-  },1);
 }
+window.onchange = function() {}
+
 function GetJSON() {
   let xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
@@ -36,8 +35,21 @@ function GetData() {
     dataFile.getDownloadURL().then(url_ => {
       a.href = url_;
       document.getElementById('root').appendChild(a);
-      a.setAttribute("id", "linkFile");
+      a.setAttribute("class", "linkFile");
       a.innerText = name;
+      // delete File
+      a.oncontextmenu = event=>{
+        event.preventDefault();
+        let c = prompt("Nhap file can xoa");
+        if (c == name) {
+          let dataFile_ = firebase.storage().ref().child(c);
+          dataFile_.delete().then(()=>{
+            location.reload();
+          }).catch(error=>{
+            console.error(error);
+          })
+        }
+      };
     });
   });
 }
@@ -65,6 +77,7 @@ function uploadFile(files) {
   }, () => {
     // Handle successful uploads on complete
     console.log("Success");
+    $("#root").scrollTop($('#root')[0].scrollHeight);
     // For instance, get the download URL: https://firebasestorage.googleapis.com/...
     filesRef.snapshot.ref.getDownloadURL().then((downloadURL) => {
       let a = document.createElement("A");

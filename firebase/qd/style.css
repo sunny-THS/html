@@ -23,13 +23,13 @@ h1 {
   text-align: center;
   overflow: scroll;
 }
-#linkFile {
+.linkFile {
   display: block;
   text-decoration: none;
   color: #000;
   font-size: 50px;
 }
-#linkFile:hover {
+.linkFile:hover {
   color: #fff;
   background: #000;
 }
