@@ -40,7 +40,7 @@ function GetData() {
       // delete File
       a.oncontextmenu = event=>{
         event.preventDefault();
-        let c = prompt("Nhap file can xoa");
+        let c = prompt("NHẬP FILE ĐÃ CHỌN ĐỂ XÓA");
         if (c == name) {
           let dataFile_ = firebase.storage().ref().child(c);
           dataFile_.delete().then(()=>{
