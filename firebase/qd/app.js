@@ -29,6 +29,7 @@ function SetData(data) {
 
 function GetData() {
   let dataFile;
+  let database = firebase.database();
   name_File.forEach((name, i) => {
     let a = document.createElement("A");
     dataFile = firebase.storage().ref().child(name);
@@ -38,19 +39,52 @@ function GetData() {
       a.setAttribute("class", "linkFile");
       a.innerText = name;
       // delete File
-      a.oncontextmenu = event=>{
+      a.oncontextmenu = event => {
         event.preventDefault();
-        let c = prompt("NHẬP FILE ĐÃ CHỌN ĐỂ XÓA");
-        if (c == name) {
-          let dataFile_ = firebase.storage().ref().child(c);
-          dataFile_.delete().then(()=>{
-            location.reload();
-          }).catch(error=>{
-            console.error(error);
-          })
-        }
+        database.ref( /*NO AUTH*/ ).once('value').then(snapshot => {
+          console.log(snapshot.val());
+          let c = prompt("Press pw");
+          if (c == snapshot.val().auth[0].password) {
+            let dataFile_ = firebase.storage().ref().child(name);
+            dataFile_.delete().then(() => {
+              location.reload();
+            }).catch(error => {
+              console.error(error);
+            })
+          }
+          var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+        });
       };
     });
+  });
+}
+
+function SignIn(file) {
+  let username, pw;
+  let t = 0;
+  let database = firebase.database();
+  database.ref().once('value').then(snapshot => {
+    while (username != snapshot.val().auth[1].username || pw != snapshot.val().auth[1].password) {
+      username = prompt("NHẬP USERNAME");
+      pw = prompt("NHẬP PASSWORD");
+      t++;
+      if (username != snapshot.val().auth[1].username || pw != snapshot.val().auth[1].password) {
+        if (username == snapshot.val().auth[0].username/* && pw == snapshot.val().auth[0].password*/) {
+          uploadFile(file);
+          break;
+        }
+        alert("Xin mời bạn nhập đủ thông tin");
+        if (t == 3) {
+          if (confirm("BẠN MUỐN THOÁT")) {
+            alert("UPLOAD FAIL")
+            break;
+          }
+        }
+      }else {
+        uploadFile(file);
+        break;
+      }
+    }
   });
 }
 
@@ -62,7 +96,7 @@ function uploadFile(files) {
 
   filesRef.on('state_changed', snapshot => {
     var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-    console.log('Upload is ' + progress + '% done');
+    document.getElementById('result').innerText = `Upload is ${progress}% done`;
     switch (snapshot.state) {
       case firebase.storage.TaskState.PAUSED: // or 'paused'
         console.log('Upload is paused');
@@ -76,14 +110,14 @@ function uploadFile(files) {
     console.error(error);
   }, () => {
     // Handle successful uploads on complete
-    console.log("Success");
+    document.getElementById('result').innerText = 'Okay';
     $("#root").scrollTop($('#root')[0].scrollHeight);
     // For instance, get the download URL: https://firebasestorage.googleapis.com/...
     filesRef.snapshot.ref.getDownloadURL().then((downloadURL) => {
       let a = document.createElement("A");
       a.href = downloadURL;
       document.getElementById('root').appendChild(a);
-      a.setAttribute("id", "linkFile");
+      a.setAttribute("class", "linkFile");
       a.innerText = nameFile;
       console.log('File available at', downloadURL);
     });
