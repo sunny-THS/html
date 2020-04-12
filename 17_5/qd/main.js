@@ -347,11 +347,15 @@ $(document).ready(function(){
 	drawName(message, letterColors);
 	bounceBubbles();
 
-
+	var music = new Audio('https://firebasestorage.googleapis.com/v0/b/fir-9d177.appspot.com/o/y2mate.com%20-%20B%C3%A0i%20h%C3%A1t%20Ch%C3%BAc%20m%E1%BB%ABng%20sinh%20nh%E1%BA%ADt%20hay%20nh%E1%BA%A5t%20(Ti%E1%BA%BFng%20anh%20l%E1%BB%9Di%20vi%E1%BB%87t)_KwsBItfeXyg_320kbps.mp3?alt=media&token=8bfde77c-b801-4b34-aa57-88fe69f520bb');
 
 // clixk nextPahe button
 	$('.nextPage').click(()=>{
+		alert('BẬT LOA HOẶC ĐEO TAI NGHE VÀO NHA ^.^');
 		if (!alert('Click on candle')) {
+			music.play();
+			music.loop = true;
+			console.log(music.volume);
 			$('.nextPage').css({'display':'none'});
 			$('canvas').css({'display':'none'});
 			$('body').css({'background':'rgba(0, 240, 255, .35)'});
