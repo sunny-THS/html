@@ -11,7 +11,7 @@ function wishes(t) {
     }else {
       $('#b').css({'opacity':1});
       $('#b').click(function() {
-        console.log("hello");
+        alert("❤️Thương bà❤️  imu ^_^");
         $(this).css({'display':'none'});
       });
       clearInterval(x);

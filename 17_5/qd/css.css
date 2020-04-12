@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 body {
   margin: 0;
   padding: 0;
@@ -357,11 +358,12 @@ canvas {
   width: 70%;
   height: 75%;
   margin: 40px auto;
-  font-size: 30px;
+  font-size: 3em;
   background: transparent;
   overflow-y: scroll;
   text-align: justify;
   z-index: 2;
+  font-family: 'Pacifico', cursive;
   border: none;
   outline: none;
   display: none;
@@ -373,8 +375,8 @@ canvas {
   position: absolute;
   cursor: pointer;
   left: 50%;
-  top: 92%;
-  font-size: 25px;
+  bottom: 0;
+  font-size: 3rem;
   transform: translateX(-50%);
   border-radius: 10px;
   border: 2px solid #fff;

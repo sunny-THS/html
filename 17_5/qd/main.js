@@ -351,11 +351,9 @@ $(document).ready(function(){
 
 // clixk nextPahe button
 	$('.nextPage').click(()=>{
-		alert('BẬT LOA HOẶC ĐEO TAI NGHE VÀO NHA ^.^');
-		if (!alert('Click on candle')) {
+		if (!alert('BẬT LOA HOẶC ĐEO TAI NGHE VÀO NHA ^.^ và NHẤN VÀO CÂY NẾN NHA ^_^')) {
 			music.play();
 			music.loop = true;
-			console.log(music.volume);
 			$('.nextPage').css({'display':'none'});
 			$('canvas').css({'display':'none'});
 			$('body').css({'background':'rgba(0, 240, 255, .35)'});
