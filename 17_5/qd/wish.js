@@ -11,7 +11,8 @@ function wishes(t) {
     }else {
       $('#b').css({'opacity':1});
       $('#b').click(function() {
-        alert("❤️Thương bà❤️  imu ^_^");
+        alert("❤️Thương em và mãi yêu em❤️  imu ^_^");
+        alert('❤️HAPPY BIRTHDAY❤️')
         $(this).css({'display':'none'});
       });
       clearInterval(x);
