@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name='theme-color' content="#000000" />
+  <title>TLHT</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var url = 'http://fp.hufi.edu.vn/uploads/images/K-';
+    var dot = '.jpg'
+    for (var i = 1; i <= 126; i++) {
+      var stt;
+      if (i < 10) {
+        stt = `00${i}`;
+      } else if (i < 100) {
+        stt = `0${i}`;
+      }else {
+        stt = i;
+      }
+      var img = new Image();
+      img.src = `${url}${stt}${dot}`;
+      document.body.appendChild(img);
+    }
+  </script>
+  <style media="screen">
+    body {
+      margin: 0;
+      background: rgba(107, 107, 107, 0.36);
+    }
+
+    img {
+      display: block;
+      margin-top: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+    }
+  </style>
+</body>
+
+</html>
