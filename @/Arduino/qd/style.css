@@ -1,0 +1,55 @@
+body
+{
+  border: 0;
+  margin: 0;
+}
+.ThongSo
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: auto;
+}
+.ThongSo::before
+{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 5px;
+  height: 100px;
+  background: #000;
+}
+h1
+{
+  display: inline;
+}
+#ND
+{
+  float: left;
+}
+#DA
+{
+  float: right;
+}
+#doAm, #nhietDo
+{
+  font-size: 10%;
+}
+#pump_
+{
+  font-size: 40px;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+#pump_:hover
+{
+  background: rgb(0, 233, 246);
+}
