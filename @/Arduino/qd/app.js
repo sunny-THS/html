@@ -71,3 +71,7 @@ function mode() {
     }
   }).catch(err => {console.error(err);});
 }
+
+function outpage() {
+  SetData(0, snapshot.val().ThongSo.NhietDo, snapshot.val().ThongSo.DoAm, 0);
+}
