@@ -10,7 +10,7 @@ body
   left: 50%;
   font-size: 2em;
   transform: translate(-50%, -50%);
-  width: 60%;
+  width: 80%;
   height: auto;
 }
 .ThongSo::before

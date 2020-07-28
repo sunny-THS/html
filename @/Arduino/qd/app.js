@@ -1,9 +1,9 @@
 window.addEventListener("beforeunload", function(e) {
-  var confirmationMessage = "\o/";
+  // var confirmationMessage = "\o/";
   SetData(0, 0, 0, 0);
 
-  (e || window.event).returnValue = confirmationMessage; // Gecko + IE
-  return confirmationMessage;
+  // (e || window.event).returnValue = confirmationMessage; // Gecko + IE
+  // return confirmationMessage;
   /* Safari, Chrome, and other
   * WebKit-derived browsers */
 });
