@@ -1,6 +1,6 @@
 window.addEventListener("beforeunload", function(e) {
   var confirmationMessage = "\o/";
-  SetData(0, snapshot.val().ThongSo.NhietDo, snapshot.val().ThongSo.DoAm, 0);
+  SetData(0, 0, 0, 0);
 
   (e || window.event).returnValue = confirmationMessage; // Gecko + IE
   return confirmationMessage;
