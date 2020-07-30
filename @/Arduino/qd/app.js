@@ -1,11 +1,11 @@
 window.addEventListener("beforeunload", function(e) {
-  // var confirmationMessage = "\o/";
+  var confirmationMessage = "\o/";
   SetData(0, 0, 0, 0);
 
-  // (e || window.event).returnValue = confirmationMessage; // Gecko + IE
-  // return confirmationMessage;
+  (e || window.event).returnValue = confirmationMessage; // Gecko + IE
+  return confirmationMessage;
   /* Safari, Chrome, and other
-  * WebKit-derived browsers */
+   * WebKit-derived browsers */
 });
 document.addEventListener("DOMContentLoaded", event => {
   var app = firebase.app();
@@ -16,7 +16,9 @@ function GetData() {
   var pump = document.getElementById('pump_');
   var mode = document.getElementById('mode_');
   firebase.database().ref( /*NO AUTH*/ ).once('value').then(snapshot => {
-    //console.log(snapshot.val());
+    // console.log(snapshot.val().SaveData);
+
+
     document.getElementById('nhietdo').innerText = Math.round(snapshot.val().ThongSo.NhietDo * 100) / 100;
     document.getElementById('doam').innerText = snapshot.val().ThongSo.DoAm;
 
@@ -52,6 +54,14 @@ function SetData(pump, t, h, mode) {
     },
     Mode: mode
   });
+
+  // firebase.database().ref('/SaveData').push({
+  //   DataTime: Date().substr(0, 24),
+  //   NhietDo: t,
+  //   DoAm: h,
+  //   PumpIsWork: pump,
+  //   Mode: mode
+  // });
 }
 
 function pump() {
