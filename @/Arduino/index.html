@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <meta name="HandheldFriendly" content="true">
@@ -20,24 +20,24 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
   <script src="qd/init.js" charset="utf-8"></script>
-  <script src="qd/app.js" charset="utf-8"></script>
   <link rel="stylesheet" href="qd/style.css">
   <title></title>
 </head>
 
 <body>
-  <div class='ThongSo'>
-    <span id='ND'>
-      <h1><b id='nhietdo'></b></h1><sup>o</sup>C
-    </span>
-    <span id='DA'>
-      <h1><b id='doam'></b></h1><sup>%</sup>
-    </span>
-  </div>
-  <h1 class='tt_mb'>Tình Trạng Máy Bơm</h1>
-  <button type="button" name="pump" id="pump_" onclick="pump();"></button>
-  <h1 class='tt_mode'>Mode</h1>
-  <button type="button" name="mode" id="mode_" onclick="mode();"></button>
+  <table class="thongSo">
+    <tr>
+      <td class="ts">
+        <h1 id="_t">NaN ᵒC</h1>
+      </td>
+      <td class="ts">
+        <h1 id="_h">NaN %</h1>
+      </td>
+    </tr>
+  </table>
+  <div class="_IP"></div>
+  <div class="pump"></div>
+  <script src="qd/app.js" charset="utf-8"></script>
 </body>
 
 </html>

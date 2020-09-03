@@ -1,79 +1,51 @@
-body
-{
-  border: 0;
+* {
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+html, body {
+  height: 100%;
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+  overflow: hidden;
+}
+.thongSo {
   margin: 0;
 }
-.ThongSo
-{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 2em;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: auto;
+.thongSo, .ts {
+  border: 2px rgb(0, 0, 0) solid;
 }
-.ThongSo::before
-{
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 5px;
-  height: 100px;
-  background: #000;
+.ts {
+  font-size: 3em;
+  padding: 5px 15px;
+  text-align: center;
+  background: rgba(0, 255, 251, 0.82);
+  color: #fff;
 }
-h1
-{
-  display: inline;
+h1 {margin: 0;}
+._IP h2 {display: inline;}
+._IP {
+  position: fixed;
+  margin-top: 200px;
+  height: 300px;
+  border: 2px #000 solid;
+  padding: 0 10px;
+  overflow-y: scroll;
 }
-#ND
-{
-  float: left;
+._IP a {
+  text-decoration: none;
+  font-size: 50px;
+  font-style: italic;
 }
-#DA
-{
-  float: right;
+._IP a:hover {
+  text-decoration: underline;
+  color: green;
 }
-#pump_, #mode_
-{
-  position: absolute;
-  font-size: 2em;
-  outline: none;
-  border: none;
-  left: 50%;
+.pump {
+  position: fixed;
   border-radius: 50%;
-  padding: 10px;
-  background: red;
-  box-shadow: 2px 3px 2px rgb(66, 66, 66);
-  cursor: pointer;
-}
-#pump_
-{
-  top: 80%;
-  transform: translate(-50%, -80%);
-}
-#mode_
-{
-  top: 20%;
-  transform: translate(-50%, -20%);
-}
-.tt_mb, .tt_mode
-{
-  position: absolute;
-  font-size: 2em;
-  outline: none;
-  border: none;
-  left: 50%;
-  padding: 10px;
-}
-.tt_mb
-{
-  top: 68%;
-  transform: translate(-50%, -68%);
-}
-.tt_mode
-{
-  top: 20%;
-  transform: translate(-50%, -20%);
+  padding: 20px;
+  box-shadow: inset 0 0 10px rgba(112, 112, 112, 0.86);
+  margin-top: 150px;
 }
